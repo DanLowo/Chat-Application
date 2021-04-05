@@ -1,13 +1,22 @@
 import React from "react";
-import { AppBar, IconButton, Toolbar, Avatar } from "@material-ui/core";
-import { Menu } from "@material-ui/icons";
+
+// import MUI components
+import IconButton from "@material-ui/core/IconButton"
+import Avatar from "@material-ui/core/Avatar"
+
+// import color
+import Grey from "@material-ui/core/colors/grey"
+
+// import icons
+import Menu from '@material-ui/icons/Menu'
 
 function navbar() {
+  const black = Grey[900]
   return (
-    <div style={{ display: "flex" }}>
+    <div className="navbar">
       <span className="icon">
         <IconButton>
-          <Menu />
+          <Menu htmlColor={black} fontSize="large" />
         </IconButton>
       </span>
       <span>
