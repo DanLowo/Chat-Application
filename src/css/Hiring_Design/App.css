@@ -33,6 +33,7 @@ body{
 .main{
     padding: 2px;
     margin: 12px;
+    margin-top: 0px;
 }
 
 .navbar{
@@ -74,7 +75,7 @@ body{
 }
 
 .search{
-    margin-top: 24px;
+    margin-top: 15px;
     margin-bottom: 27px;
 }
 
