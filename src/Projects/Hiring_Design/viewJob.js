@@ -1,13 +1,15 @@
 import React from "react";
 
-import ViewJobHeader from "../../components/Hiring_Design/viewJobHeader";
-import JobsWithHeader from "../../components/Hiring_Design/jobsWithHeader"
+import ViewJobHeader from "./components/viewJobHeader";
+import JobsWithHeader from "./components/jobsWithHeader"
 
 // import MUI components
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid"
 import Hidden from "@material-ui/core/Hidden"
+
+import "./assets/App.css"
 
 function viewJob() {
   const requirements = [

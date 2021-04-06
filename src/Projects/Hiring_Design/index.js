@@ -1,17 +1,18 @@
 import React from "react";
 
 // import all project components
-import Navbar from "../../components/Hiring_Design/navbar";
-import Search from "../../components/Hiring_Design/search";
-import JobsWithHeader from "../../components/Hiring_Design/jobsWithHeader"
-import Category from "../../components/Hiring_Design/category"
+import Navbar from "./components/navbar";
+import Search from "./components/search";
+import JobsWithHeader from "./components/jobsWithHeader"
+import Category from "./components/category"
 
 // import MUI components
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid"
 import Hidden from "@material-ui/core/Hidden"
 
-
+// import all project css
+import "./assets/App.css"
 
 function index() {
   return (

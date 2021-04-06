@@ -1,25 +1,25 @@
 @font-face {
     font-family: "Bold";
     src: local("Bold"),
-      url(../../fonts/Hiring_Design/bold.ttf) format("truetype");
+      url(./bold.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "Bold Italic";
     src: local("Bold Italic"),
-      url(../../fonts/Hiring_Design/bold-italic.ttf) format("truetype");
+      url(./bold-italic.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "Normal";
     src: local("Normal"),
-      url(../../fonts/Hiring_Design/normal.ttf) format("truetype");
+      url(./normal.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "Normal Italic";
     src: local("Normal Italic"),
-      url(../../fonts/Hiring_Design/bold.ttf) format("truetype");
+      url(./bold.ttf) format("truetype");
 }
   
 
