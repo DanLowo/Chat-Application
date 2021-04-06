@@ -25,9 +25,13 @@
 
 
 body{
+    margin: 0px;
+}
+
+.index{
     padding-top: 7px;
     padding-bottom: 15px;
-     margin: 0px;
+    margin: 0px;   
 }
 
 .main{
@@ -194,4 +198,42 @@ body{
 
 .topSpacing{
     margin-top: 30px;
+}
+
+#viewJobHeader{
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+#viewJobHeader body{
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+#viewJobHeaderDesign{
+    background-color: #e1bee7;
+    padding-top: 110px;
+    padding-bottom: 15px;
+    margin-right: 45px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+#viewJobCompany{
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-family: 'Normal'
+}
+
+#viewJobPosition{
+    font-size: 24px;
+    font-family: "Bold";
+    margin-bottom: 5px;
+}
+
+#viewJobLocation{
+    font-size: 17px;
+    color: rgb(83, 79, 79);
+    margin-bottom: 10px;
+    font-family: 'Normal'
 }
