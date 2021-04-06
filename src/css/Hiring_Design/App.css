@@ -3,16 +3,19 @@
     src: local("Bold"),
       url(../../fonts/Hiring_Design/bold.ttf) format("truetype");
 }
+
 @font-face {
     font-family: "Bold Italic";
     src: local("Bold Italic"),
       url(../../fonts/Hiring_Design/bold-italic.ttf) format("truetype");
 }
+
 @font-face {
     font-family: "Normal";
     src: local("Normal"),
       url(../../fonts/Hiring_Design/normal.ttf) format("truetype");
 }
+
 @font-face {
     font-family: "Normal Italic";
     src: local("Normal Italic"),
@@ -100,10 +103,10 @@ body{
 }
 
 #jobPaper{
-    height: 240px;
+    height: 250px;
     padding: 10px;
     padding-top: 20px;
-    background-color: #c8e6c9;
+    background-color: #d0e7d1;
 }
 
 #jobCompany{
@@ -129,7 +132,7 @@ body{
     font-size: 14px;
     /* padding: 2px; */
     border-radius: 7px;
-    background-color: rgb(33, 168, 33);
+    background-color: rgb(31, 148, 31);
     color: white;
     font-family: "Bold";
     margin-bottom: 12px;
