@@ -38,7 +38,7 @@ function category() {
     ]
 
     return (
-        <div class="topSpacing">
+        <div className="topSpacing">
             <div className="jobHeader">
                 <span className="jobHeaderTitle">
                     <Typography id="jobHeaderTitle" component="h4" variant="h5">Categories</Typography>
@@ -51,8 +51,8 @@ function category() {
             </div>
             <div className="categoryGrid">
                 <Grid container spacing={1}>
-                    {categories.map(category => (
-                        <Grid item xs={4} md={4} lg={4}>
+                    {categories.map((category, k) => (
+                        <Grid key={k} item xs={4} md={4} lg={4}>
                             <Paper align="center" id="categoryPaper" style={{backgroundColor: category.color}} >
                                 <Paper id="categoryIcon" elevation={0}> <category.icon htmlColor={category.iconColor}/> </Paper>
                                 <Typography id="categoryTitle" variant="h4" component="h4">{category.title}</Typography>

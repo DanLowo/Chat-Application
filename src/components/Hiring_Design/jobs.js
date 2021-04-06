@@ -42,10 +42,10 @@ function jobs() {
     ]
     return (
         <div>
-            <Grid container spacing={1}>
+            <Grid container spacing={1} align="center">
                 {jobs.map((job, i) => (
-                    <Grid key={i} item xs={6} md={6} lg={3} >
-                        <Paper id="jobPaper">
+                    <Grid key={i} item xs={6} md={6} lg={6} >
+                        <Paper id="jobPaper" align="left">
                             <Typography id="jobCompany" component="h5" variant="h5">{job.company}</Typography>
                             <Typography id="jobPosition" component="h4" variant="h5">{job.position}</Typography>
                             <Typography id="jobLocation" component="h6" variant="h6">{job.location}</Typography>
