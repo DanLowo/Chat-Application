@@ -1,5 +1,7 @@
 import React from "react";
 
+import "../../css/Hiring_Design/App.css"
+
 // import all project components
 import Navbar from "../../components/Hiring_Design/navbar";
 import Search from "../../components/Hiring_Design/search";

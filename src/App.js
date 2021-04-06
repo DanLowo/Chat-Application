@@ -1,4 +1,3 @@
-import "./css/Hiring_Design/App.css"
 import HiringDesign from './Projects/Hiring_Design/index'
 
 function App() {
