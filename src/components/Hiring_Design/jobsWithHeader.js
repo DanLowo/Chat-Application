@@ -11,12 +11,12 @@ import Typography from "@material-ui/core/Typography"
 // import MUI color
 // import Green from "@material-ui/core/colors/green"
 
-function jobsWithHeader() {
+function jobsWithHeader({header}) {
     return (
         <div>
             <div className="jobHeader">
                 <span className="jobHeaderTitle">
-                    <Typography id="jobHeaderTitle" component="h4" variant="h5">Job Matches</Typography>
+                    <Typography id="jobHeaderTitle" component="h4" variant="h5"> {header || 'Job Matches' }</Typography>
                 </span>
                 <span>
                     <Typography id="jobHeaderMore" component="h6" variant="h5">

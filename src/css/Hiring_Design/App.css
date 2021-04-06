@@ -263,3 +263,12 @@ a{
     margin-top: 15px;
     font-family: 'Bold'
 }
+
+#largeScreenJobs{
+    padding: 30px;
+}
+
+#largeScreenViewJob{
+    padding-right: 80px;
+    padding-left: 80px;
+}
