@@ -27,10 +27,12 @@
 body{
     padding-top: 7px;
     padding-bottom: 15px;
+     margin: 0px;
 }
 
 .main{
     padding: 2px;
+    margin: 12px;
 }
 
 .navbar{
@@ -103,7 +105,7 @@ body{
 }
 
 #jobPaper{
-    height: 250px;
+    max-height: 300px;
     padding: 10px;
     padding-top: 20px;
     background-color: #d0e7d1;
