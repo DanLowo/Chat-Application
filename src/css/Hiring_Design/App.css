@@ -28,6 +28,10 @@ body{
     margin: 0px;
 }
 
+a{
+    text-decoration: none;
+}
+
 .index{
     padding-top: 7px;
     padding-bottom: 15px;

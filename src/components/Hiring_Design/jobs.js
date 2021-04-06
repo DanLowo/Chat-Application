@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom"
 
 // import MUI components
 import Grid from "@material-ui/core/Grid"
@@ -45,17 +46,19 @@ function jobs() {
             <Grid container spacing={1} align="center">
                 {jobs.map((job, i) => (
                     <Grid key={i} item xs={6} md={6} lg={6} >
-                        <Paper id="jobPaper" align="left">
-                            <Typography id="jobCompany" component="h5" variant="h5">{job.company}</Typography>
-                            <Typography id="jobPosition" component="h4" variant="h5">{job.position}</Typography>
-                            <Typography id="jobLocation" component="h6" variant="h6">{job.location}</Typography>
-                            <Chip id="jobType" label={job.type} />
-                            <Typography id="beAnEarlyApplicant" component="h6" variant="h6">
-                                <ScheduleIcon id="beAnEarlyApplicationIcon"/>
-                                Be an early application
+                        <Link to="/view-job">
+                            <Paper id="jobPaper" align="left">
+                                <Typography id="jobCompany" component="h5" variant="h5">{job.company}</Typography>
+                                <Typography id="jobPosition" component="h4" variant="h5">{job.position}</Typography>
+                                <Typography id="jobLocation" component="h6" variant="h6">{job.location}</Typography>
+                                <Chip id="jobType" label={job.type} />
+                                <Typography id="beAnEarlyApplicant" component="h6" variant="h6">
+                                    <ScheduleIcon id="beAnEarlyApplicationIcon" />
+                                    Be an early application
                             </Typography>
-                            <Typography id="jobTime" component="h6" variant="h6">Posted: {job.time}</Typography>
-                        </Paper>
+                                <Typography id="jobTime" component="h6" variant="h6">Posted: {job.time}</Typography>
+                            </Paper>
+                        </Link>
                     </Grid>
                 ))}
             </Grid>
