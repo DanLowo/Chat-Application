@@ -1,7 +1,73 @@
+@font-face {
+    font-family: "Bold";
+    src: local("Bold"),
+      url(../../fonts/Hiring_Design/bold.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Bold Italic";
+    src: local("Bold Italic"),
+      url(../../fonts/Hiring_Design/bold-italic.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Normal";
+    src: local("Normal"),
+      url(../../fonts/Hiring_Design/normal.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Normal Italic";
+    src: local("Normal Italic"),
+      url(../../fonts/Hiring_Design/bold.ttf) format("truetype");
+}
+  
+
+
+body{
+    padding: 3px;
+    padding-top: 7px;
+}
+
+.main{
+    padding: 15px;
+}
+
 .navbar{
     display: flex;
 }
 
 .icon{
     flex-grow: 1;
+}
+
+#findAmazingJobs{
+    font-family: 'Bold';
+    font-size: 25px;
+    padding-top: 2px;
+}
+
+#heyEric{
+    font-family: 'Normal';
+    font-size: 22px;
+}
+
+#searchFilterButton{
+    background-color: #f5f5f5;
+    min-width: 20px;
+    height: 54px;
+    margin-right: -6px;
+}
+
+#searchField{
+    padding-bottom: 20px;
+    border-radius: 5px;
+    display: block;
+}
+
+#searchIcon{
+    color: rgb(149, 143, 143);
+    font-size: 30px;
+    margin-bottom: 11px;
+}
+
+.search{
+    margin-top: 24px;
 }

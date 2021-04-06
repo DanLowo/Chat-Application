@@ -1,12 +1,31 @@
-import React from 'react'
-import Navbar from '../../components/Hiring_Design/navbar'
+import React from "react";
+
+// import all project components
+import Navbar from "../../components/Hiring_Design/navbar";
+import Search from "../../components/Hiring_Design/search";
+
+// import MUI components
+import Typography from "@material-ui/core/Typography";
+
+
 
 function index() {
-    return (
-        <div>
-            <Navbar/>
+  return (
+    <div>
+      <Navbar />
+      <div className="main">
+        <Typography id="heyEric" variant="h6" component="h6">
+          Hey, Eric!
+        </Typography>
+        <Typography id="findAmazingJobs" variant="h5" component="h5">
+          Find Amazing Jobs
+        </Typography>
+        <div className="search">
+            <Search/>
         </div>
-    )
+      </div>
+    </div>
+  );
 }
 
-export default index
+export default index;

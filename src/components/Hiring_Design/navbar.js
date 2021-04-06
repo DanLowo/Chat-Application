@@ -8,7 +8,7 @@ import Avatar from "@material-ui/core/Avatar"
 import Grey from "@material-ui/core/colors/grey"
 
 // import icons
-import Menu from '@material-ui/icons/Menu'
+import Menu from '@material-ui/icons/Notes'
 
 function navbar() {
   const black = Grey[900]
