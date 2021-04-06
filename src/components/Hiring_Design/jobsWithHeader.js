@@ -7,7 +7,6 @@ import Jobs from "./jobs"
 import Typography from "@material-ui/core/Typography"
 
 // import MUI icons
-import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 
 // import MUI color
 // import Green from "@material-ui/core/colors/green"
@@ -22,7 +21,6 @@ function jobsWithHeader() {
                 <span>
                     <Typography id="jobHeaderMore" component="h6" variant="h5">
                         more
-                        <KeyboardArrowRightIcon id="moreIcon"/>
                     </Typography>
                 </span>
             </div>

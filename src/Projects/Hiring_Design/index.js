@@ -6,6 +6,7 @@ import "../../css/Hiring_Design/App.css"
 import Navbar from "../../components/Hiring_Design/navbar";
 import Search from "../../components/Hiring_Design/search";
 import JobsWithHeader from "../../components/Hiring_Design/jobsWithHeader"
+import Category from "../../components/Hiring_Design/category"
 
 // import MUI components
 import Typography from "@material-ui/core/Typography";
@@ -27,6 +28,7 @@ function index() {
             <Search/>
         </div>
         <JobsWithHeader/>
+        <Category/>
       </div>
     </div>
   );
