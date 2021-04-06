@@ -15,6 +15,7 @@ function search() {
           <form>
             <TextField
               variant="filled"
+              fullWidth
               id="searchField"
               margin="dense"
               size="small"
