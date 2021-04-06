@@ -159,7 +159,7 @@ body{
 
 #jobTime{
     font-size: 14px; 
-    color: rgb(83, 79, 79);
+    color: #534f4f;
     font-family: 'Normal'
 }
 
@@ -212,7 +212,7 @@ body{
 
 #viewJobHeaderDesign{
     background-color: #e1bee7;
-    padding-top: 110px;
+    padding-top: 100px;
     padding-bottom: 15px;
     margin-right: 45px;
     border-bottom-right-radius: 30px;
@@ -236,4 +236,25 @@ body{
     color: rgb(83, 79, 79);
     margin-bottom: 10px;
     font-family: 'Normal'
+}
+
+#viewJob{
+    padding: 30px;
+}
+
+#viewJobTextBody{
+    color: grey;
+}
+
+#viewJobTextBodyList{
+    color: grey;
+    padding-left: 15px;
+}
+
+#applyToJobButton{
+    background-color: #7b1fa2c9;
+    color: white;
+    padding: 10px;
+    margin-top: 15px;
+    font-family: 'Bold'
 }
