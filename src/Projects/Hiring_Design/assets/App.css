@@ -1,0 +1,274 @@
+@font-face {
+    font-family: "Bold";
+    src: local("Bold"),
+      url(./bold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Bold Italic";
+    src: local("Bold Italic"),
+      url(./bold-italic.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Normal";
+    src: local("Normal"),
+      url(./normal.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Normal Italic";
+    src: local("Normal Italic"),
+      url(./bold.ttf) format("truetype");
+}
+  
+
+
+body{
+    margin: 0px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.index{
+    padding-top: 7px;
+    padding-bottom: 15px;
+    margin: 0px;   
+}
+
+.main{
+    padding: 2px;
+    margin: 12px;
+    margin-top: 0px;
+}
+
+.navbar{
+    display: flex;
+}
+
+.icon{
+    flex-grow: 1;
+}
+
+#findAmazingJobs{
+    font-family: 'Bold';
+    font-size: 25px;
+    padding-top: 2px;
+}
+
+#heyEric{
+    font-family: 'Normal';
+    font-size: 22px;
+}
+
+#searchFilterButton{
+    background-color: #f5f5f5;
+    min-width: 20px;
+    height: 54px;
+    margin-right: -6px;
+}
+
+#searchField{
+    padding-bottom: 20px;
+    border-radius: 5px;
+    display: block;
+}
+
+#searchIcon{
+    color: rgb(149, 143, 143);
+    font-size: 25px;
+    margin-bottom: 11px;
+}
+
+.search{
+    margin-top: 15px;
+    margin-bottom: 27px;
+}
+
+.jobHeader{
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.jobHeaderTitle{
+    flex-grow: 1;
+}
+
+#jobHeaderTitle{
+    font-family: 'Bold';
+    font-size: 22px;
+}
+
+#jobHeaderMore{
+    font-family: 'Bold';
+    font-size: 16px;
+    color: #61aa65;
+}
+
+#moreIcon{
+    font-size: 20px;
+    margin-bottom: -6px;
+    margin-left: -3px;
+}
+
+#jobPaper{
+    max-height: 300px;
+    max-width: 400px;
+    padding: 10px;
+    padding-top: 20px;
+    background-color: #d0e7d1;
+}
+
+#jobCompany{
+    font-size: 17px;
+    margin-bottom: 5px;
+    font-family: 'Normal'
+}
+
+#jobPosition{
+    font-size: 22px;
+    font-family: "Bold";
+    margin-bottom: 5px;
+}
+
+#jobLocation{
+    font-size: 14px;
+    color: rgb(83, 79, 79);
+    margin-bottom: 10px;
+    font-family: 'Normal'
+}
+
+#jobType{
+    font-size: 14px;
+    /* padding: 2px; */
+    border-radius: 7px;
+    background-color: #1f941f;
+    color: white;
+    font-family: "Bold";
+    margin-bottom: 12px;
+}
+
+#beAnEarlyApplicant{
+    font-size: 14px;
+    font-family: "Bold";
+    margin-bottom: 12px;
+}
+
+#beAnEarlyApplicationIcon{
+    font-size: 15px;
+    margin-bottom: -2px;
+    padding-right: 2px;
+}
+
+#jobTime{
+    font-size: 14px; 
+    color: #534f4f;
+    font-family: 'Normal'
+}
+
+#categoryPaper{
+    padding: 17px;
+    padding-right: 5px;
+    padding-left: 5px;
+    border-radius: 10px;
+}
+
+#categoryIcon{
+    width: 40px;
+    padding: 2px;
+    padding-top: 5px;
+    margin-bottom: 5px;
+}
+
+#categoryTitle{
+    font-size: 15px;
+    font-family: 'Normal';
+    margin-bottom: 6px;   
+}
+
+#categoryNumberOfJobs{
+    font-family: 'Bold';
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+#categoryButton{
+    background-color: white;
+    color: rgb(83, 79, 79);
+    font-family: 'Normal';
+    font-size: 10px;
+}
+
+.topSpacing{
+    margin-top: 30px;
+}
+
+#viewJobHeader{
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+#viewJobHeader body{
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+#viewJobHeaderDesign{
+    background-color: #e1bee7;
+    padding-top: 100px;
+    padding-bottom: 15px;
+    margin-right: 45px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+#viewJobCompany{
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-family: 'Normal'
+}
+
+#viewJobPosition{
+    font-size: 24px;
+    font-family: "Bold";
+    margin-bottom: 5px;
+}
+
+#viewJobLocation{
+    font-size: 17px;
+    color: rgb(83, 79, 79);
+    margin-bottom: 10px;
+    font-family: 'Normal'
+}
+
+#viewJob{
+    padding: 30px;
+}
+
+#viewJobTextBody{
+    color: grey;
+}
+
+#viewJobTextBodyList{
+    color: grey;
+    padding-left: 15px;
+}
+
+#applyToJobButton{
+    background-color: #7b1fa2c9;
+    color: white;
+    padding: 10px;
+    margin-top: 15px;
+    font-family: 'Bold'
+}
+
+#largeScreenJobs{
+    padding: 30px;
+}
+
+#largeScreenViewJob{
+    padding-right: 80px;
+    padding-left: 80px;
+}
