@@ -3,6 +3,7 @@ import React from "react";
 // import all project components
 import Navbar from "../../components/Hiring_Design/navbar";
 import Search from "../../components/Hiring_Design/search";
+import JobsWithHeader from "../../components/Hiring_Design/jobsWithHeader"
 
 // import MUI components
 import Typography from "@material-ui/core/Typography";
@@ -23,6 +24,7 @@ function index() {
         <div className="search">
             <Search/>
         </div>
+        <JobsWithHeader/>
       </div>
     </div>
   );

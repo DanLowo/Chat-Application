@@ -22,12 +22,12 @@
 
 
 body{
-    padding: 3px;
     padding-top: 7px;
+    padding-bottom: 15px;
 }
 
 .main{
-    padding: 15px;
+    padding: 2px;
 }
 
 .navbar{
@@ -64,10 +64,91 @@ body{
 
 #searchIcon{
     color: rgb(149, 143, 143);
-    font-size: 30px;
+    font-size: 25px;
     margin-bottom: 11px;
 }
 
 .search{
     margin-top: 24px;
+    margin-bottom: 27px;
+}
+
+.jobHeader{
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.jobHeaderTitle{
+    flex-grow: 1;
+}
+
+#jobHeaderTitle{
+    font-family: 'Bold';
+    font-size: 22px;
+}
+
+#jobHeaderMore{
+    font-family: 'Bold';
+    font-size: 16px;
+    color: #008000;
+}
+
+#moreIcon{
+    font-size: 20px;
+    margin-bottom: -6px;
+    margin-left: -3px;
+}
+
+#jobPaper{
+    height: 240px;
+    padding: 10px;
+    padding-top: 20px;
+    background-color: #c8e6c9;
+}
+
+#jobCompany{
+    font-size: 17px;
+    margin-bottom: 5px;
+    font-family: 'Normal'
+}
+
+#jobPosition{
+    font-size: 22px;
+    font-family: "Bold";
+    margin-bottom: 5px;
+}
+
+#jobLocation{
+    font-size: 14px;
+    color: rgb(83, 79, 79);
+    margin-bottom: 10px;
+    font-family: 'Normal'
+}
+
+#jobType{
+    font-size: 14px;
+    /* padding: 2px; */
+    border-radius: 7px;
+    background-color: rgb(33, 168, 33);
+    color: white;
+    font-family: "Bold";
+    margin-bottom: 12px;
+}
+
+#beAnEarlyApplicant{
+    font-size: 14px;
+    font-family: "Bold";
+    margin-bottom: 12px;
+}
+
+#beAnEarlyApplicationIcon{
+    font-size: 15px;
+    margin-bottom: -2px;
+    padding-right: 2px;
+}
+
+#jobTime{
+    font-size: 14px; 
+    color: rgb(83, 79, 79);
+    font-family: 'Normal'
 }
