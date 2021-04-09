@@ -1,3 +1,10 @@
+/* @font-face {
+    font-family: "Bold";
+    src: local("Bold"),
+      url(./bold.ttf) format("truetype");
+} */
+
+
 #fruit{
     padding: 20px;
 }
