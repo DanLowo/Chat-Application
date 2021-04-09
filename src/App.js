@@ -7,6 +7,7 @@ import ViewJob from './Projects/hiring/viewJob'
 import FruitDesign from "./Projects/fruit/index"
 import ViewFruit from "./Projects/fruit/viewFruit"
 import Cart from "./Projects/fruit/cart"
+import Account from "./Projects/fruit/account"
 
 import { Switch, Route } from "react-router-dom"
 
@@ -32,6 +33,9 @@ function App() {
         </Route>
         <Route path="/fruits/cart">
           <Cart/>
+        </Route>
+        <Route path="/fruits/account">
+          <Account/>
         </Route>
 
       </Switch>

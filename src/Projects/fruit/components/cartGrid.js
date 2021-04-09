@@ -59,7 +59,7 @@ function CartGrid() {
     return (
         <div id="cart">
             {items.map(item => (
-                <div>
+                <div key={item.name}>
                     <Grid container id="cartGridItem">
                         <Grid item xs={3} md={3} sm={3}>
                             <img src={item.img} alt={item.name} />

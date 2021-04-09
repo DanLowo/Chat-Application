@@ -282,3 +282,41 @@
     font-size: 16px;
     font-weight: 100;
 }
+
+#section{
+    background-color: green;
+    padding: 0px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 25px;
+    border-radius: 25px;
+    
+}
+
+#section #card-title{
+    margin-bottom: -10px;
+    color: white;
+    font-size: 18px;
+}
+
+#section #email{
+    color: white;
+    font-size: 14px;
+}
+
+#section #avatar{
+    margin-top: 10px;
+    /* font-size: 50px; */
+    width: 55px;
+    height: 50px;
+}
+
+#section #icon{
+    margin-top: 20px;
+}
+
+#listItem{
+    margin-top: 10px;
+    margin-bottom: 6px;
+}

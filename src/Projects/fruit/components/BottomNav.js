@@ -22,7 +22,7 @@ function BottomNav() {
                 <BottomNavigationAction component={Link} to="/fruit" label="Home" icon={<AppsIcon />} />
                 <BottomNavigationAction label="Wish List" icon={<FavoriteIcon />} />
                 <BottomNavigationAction component={Link} to="/fruits/cart" label="My Cart" icon={<ShoppingCartIcon />} />
-                <BottomNavigationAction label="Account" icon={<PersonIcon />} />
+                <BottomNavigationAction component={Link} to="/fruits/account" label="Account" icon={<PersonIcon />} />
             </BottomNavigation>
         </div>
     )
