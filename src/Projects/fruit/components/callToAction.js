@@ -11,7 +11,7 @@ function callToAction() {
                     Take advantage <br /> of the best deals
                 </span>
                 <span>
-                    <Button size="small" variant="contained" color="inherit" endIcon={ <ChevronRightIcon htmlColor="black"/> } >Check deals</Button>
+                    <Button size="small" variant="contained" id="callToActionButton" endIcon={ <ChevronRightIcon htmlColor="black"/> } > Check deals</Button>
                 </span>
             </div>
         </div>
