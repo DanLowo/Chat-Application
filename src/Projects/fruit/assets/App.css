@@ -1,0 +1,16 @@
+#fruit{
+    padding: 20px;
+}
+
+#navbar{
+    display: flex;
+} 
+
+#navbar-title{
+    flex-grow: 1;
+}
+
+#letGetVitamins{
+    font-size: 25px;
+    font-weight: 600;
+}
