@@ -8,15 +8,21 @@ import Search from "./components/search"
 import FruitSlide from "./components/fruitSlide"
 import CallToAction from "./components/callToAction"
 import FruitGrid from "./components/fruitGrid"
+import BottomNav from "./components/BottomNav"
 
 function index() {
     return (
         <div id="fruit">
+            
             <Navbar/>
             <Search/>
             <FruitSlide/>
             <CallToAction/>
             <FruitGrid/>
+            <div id="bottomNavSpacing">
+            <BottomNav/>
+            </div>
+            
         </div>
     )
 }

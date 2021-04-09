@@ -85,7 +85,7 @@
 
 #dealsSectionText{
     color: white;
-    font-size: 16px;
+    font-size: 13px;
     flex-grow: 1;
 
 }
@@ -100,7 +100,7 @@
 }
 
 .fruitGrid img{
-    height: 160px;
+    height: 146px;
     width: 100%;
 }
 
@@ -119,4 +119,25 @@
     font-size: 14px;
     color: grey;
     margin-left: 4px;
+}
+
+#bottomNavSpacing{
+    margin-top: 70px;
+}
+
+#bottomNav{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: '100%';
+    position: fixed;
+    bottom: 0;
+}
+
+#bottomNav .Mui-selected{
+    color: green !important;
+    padding: 0px;
+}
+
+#bottomNav .MuiBottomNavigationAction-root{
+    padding: 0px !important;
 }
