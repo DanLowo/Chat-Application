@@ -1,0 +1,12 @@
+#navbar{
+    display: flex;
+}
+
+#navbarHeader{
+    flex-grow: 1;
+}
+
+#navbar-title{
+    font-size: 14px;
+    color: grey;
+}
