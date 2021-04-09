@@ -1,5 +1,5 @@
-import HiringDesign from './Projects/Hiring_Design/index'
-import ViewJob from './Projects/Hiring_Design/viewJob'
+import HiringDesign from './Projects/hiring/index'
+import ViewJob from './Projects/hiring/viewJob'
 
 import { Switch, Route } from "react-router-dom"
 
