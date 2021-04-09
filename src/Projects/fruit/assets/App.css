@@ -14,3 +14,70 @@
     font-size: 25px;
     font-weight: 600;
 }
+
+#searchFilter{
+    margin-left: 10px;
+    margin-top: 8px;
+    background-color: rgb(104, 160, 104);
+    border-radius: 10px;
+    height: 60px;
+    padding-right: 17px;
+    padding-left: 17px;
+}
+
+.MuiInputBase-root{
+    border-radius: 12px !important;
+}
+
+.MuiFilledInput-underline:before{
+    border: 0px !important;
+}
+
+.MuiFilledInput-underline:after{
+    border: 0px !important;   
+}
+
+#fruitSlide {
+    margin-top: 18px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+#fruitSlide::-webkit-scrollbar {
+    display: none;
+}
+
+#fruitSlideItem{
+    margin-right: 15px;
+    padding: 5px;
+    font-size: 20px;
+}
+
+#fruitSlide a{
+    text-decoration: none;
+    color: rgb(146, 140, 140);
+    font-weight: 700;
+}
+
+.fruitSlideItemActive{
+    /* padding-bottom: 13px; */
+    color: green !important;
+    border-bottom: 10px solid green;
+}
+
+#dealsSection{
+    margin-top: 20px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: green;
+    padding: 25px;
+    padding-top: 25px;
+    display: flex
+}
+
+#dealsSectionText{
+    color: white;
+    font-size: 16px;
+    flex-grow: 1;
+
+}
