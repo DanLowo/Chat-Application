@@ -1,5 +1,7 @@
 import React from 'react'
 
+import "./assets/App.css"
+
 // import all components for view fruit
 import NavBar from "./components/viewFruit/navbar"
 import Details from "./components/viewFruit/details"

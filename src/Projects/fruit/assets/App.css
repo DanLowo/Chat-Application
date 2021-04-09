@@ -232,3 +232,53 @@
  font-size: 11px;
  color: white;
 }
+
+#cartTitle{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#cartGridItem{
+    margin-top: 30px;
+    margin-bottom: 6px;
+}
+
+#cart{
+    margin-top: 10px;
+}
+
+#cart img{
+    width: 100%;
+}
+
+#cart #name{
+    flex-grow: 1;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+#cart #location{
+    font-size: 13px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: grey;
+}
+
+#cart #kilo{
+    font-size: 14px;
+    flex-grow: 1;
+}
+
+#cart #quantity-button1{
+    display: inline;
+    background-color: green;
+    padding: 0px;
+    border-radius: 9px;
+}
+
+#cart #quantity-value1{
+    margin-right: 3px;
+    margin-left: 3px;
+    font-size: 16px;
+    font-weight: 100;
+}
