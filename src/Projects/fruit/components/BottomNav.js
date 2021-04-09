@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 
+import {Link} from "react-router-dom"
+
 import BottomNavigation from "@material-ui/core/BottomNavigation"
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction"
 
@@ -17,9 +19,9 @@ function BottomNav() {
                 onChange={(event, newValue) => {
                     setValue(newValue);
                 }}>
-                <BottomNavigationAction label="Home" icon={<AppsIcon />} />
+                <BottomNavigationAction component={Link} to="/fruit" label="Home" icon={<AppsIcon />} />
                 <BottomNavigationAction label="Wish List" icon={<FavoriteIcon />} />
-                <BottomNavigationAction label="My Cart" icon={<ShoppingCartIcon />} />
+                <BottomNavigationAction component={Link} to="/fruits/cart" label="My Cart" icon={<ShoppingCartIcon />} />
                 <BottomNavigationAction label="Account" icon={<PersonIcon />} />
             </BottomNavigation>
         </div>
