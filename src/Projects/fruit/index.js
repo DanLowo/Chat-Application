@@ -7,6 +7,7 @@ import Navbar from "./components/navbar"
 import Search from "./components/search"
 import FruitSlide from "./components/fruitSlide"
 import CallToAction from "./components/callToAction"
+import FruitGrid from "./components/fruitGrid"
 
 function index() {
     return (
@@ -15,6 +16,7 @@ function index() {
             <Search/>
             <FruitSlide/>
             <CallToAction/>
+            <FruitGrid/>
         </div>
     )
 }

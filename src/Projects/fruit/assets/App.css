@@ -2,6 +2,10 @@
     padding: 20px;
 }
 
+/* p h1 h3 span h2 h4 h5 h6 div{
+    font-family: 'Times New Roman', Times, serif;
+} */
+
 #navbar{
     display: flex;
 } 
@@ -80,4 +84,35 @@
     font-size: 16px;
     flex-grow: 1;
 
+}
+
+.fruitGrid{
+    margin-top: 20px;
+}
+
+#fruitGridPaper{
+    padding: 10px;
+    margin-top: 15px;
+}
+
+.fruitGrid img{
+    height: 160px;
+    width: 100%;
+}
+
+#fruitGridName{
+    font-weight: 700;
+    font-size: 17px;
+}
+
+#fruitGridPrice{
+    font-weight: 700;
+    font-size: 19px;
+}
+
+#perKg{
+    font-weight: 100;
+    font-size: 14px;
+    color: grey;
+    margin-left: 4px;
 }
