@@ -14,8 +14,12 @@
     flex-grow: 1;
 }
 
+#navbar-title-text{
+    font-size: 18px;
+}
+
 #letGetVitamins{
-    font-size: 25px;
+    font-size: 21px;
     font-weight: 600;
 }
 

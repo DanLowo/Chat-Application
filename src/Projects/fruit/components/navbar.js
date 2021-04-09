@@ -8,9 +8,9 @@ function navbar() {
     return (
         <div>
             <div id="navbar">
-                <span id="navbar-title"> <Typography component='h5' variant="h5">Hey Dee</Typography> </span>
+                <span id="navbar-title"> <Typography id="navbar-title-text" component='h6' variant="h6">Hey Dee</Typography> </span>
                 <span>
-                    <NotificationsIcon htmlColor="grey" fontSize="large"></NotificationsIcon>
+                    <NotificationsIcon htmlColor="grey" fontSize="medium"></NotificationsIcon>
                 </span>
             </div>
             <div>
