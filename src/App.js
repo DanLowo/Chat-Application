@@ -5,6 +5,7 @@ import ViewJob from './Projects/hiring/viewJob'
 
 // import all pages for fruit design
 import FruitDesign from "./Projects/fruit/index"
+import ViewFruit from "./Projects/fruit/viewFruit"
 
 import { Switch, Route } from "react-router-dom"
 
@@ -20,10 +21,15 @@ function App() {
           <ViewJob/>
         </Route>
 
+
       {/* set all fruit design routes */}
         <Route path="/fruit">
           <FruitDesign/>
         </Route>
+        <Route path="/fruits/view-fruit">
+          <ViewFruit/>
+        </Route>
+
       </Switch>
   </div>;
 }
