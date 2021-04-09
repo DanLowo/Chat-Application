@@ -12,7 +12,7 @@ import FilterListIcon from '@material-ui/icons/FilterList';
 
 function search() {
     return (
-        <div>
+        <div id="search">
           <form>
             <TextField
               variant="filled"
