@@ -22,7 +22,7 @@
 }
 
 #navbar-title-text{
-    font-size: 18px;
+    font-size: 15px;
 }
 
 #letGetVitamins{
@@ -32,6 +32,14 @@
 
 #search{
     margin-top: 8px;
+}
+
+#search .MuiFormControl-root{
+    width: 78% !important;
+}
+
+#search .MuiInputBase-root{
+    height: 50px !important;
 }
 
 #searchFilter{
@@ -87,21 +95,28 @@
 #callToActionButton{
     background-color: white;
     font-size: 10px;
+    margin-top: 2px;
 }
 
 #dealsSection{
     margin-top: 20px;
-    height: 30px;
-    border-radius: 20px;
-    background-color: green;
+    height: 35px;
+    border-radius: 10px;
+    /* background-color: green; */
+    background-image: url("./grapes.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     padding: 25px;
-    padding-top: 25px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 35px;
     display: flex
 }
 
 #dealsSectionText{
     color: white;
-    font-size: 13px;
+    font-size: 14px;
     flex-grow: 1;
 
 }
@@ -127,7 +142,7 @@
 
 #fruitGridPrice{
     font-weight: 700;
-    font-size: 19px;
+    font-size: 18px;
 }
 
 #perKg{
@@ -156,14 +171,6 @@
 
 #bottomNav .MuiBottomNavigationAction-root{
     padding: 0px !important;
-}
-
-#search .MuiFormControl-root{
-    width: 75% !important;
-}
-
-#search .MuiInputBase-root{
-    height: 50px !important;
 }
 
 #details #fruitTitle{
