@@ -1,0 +1,336 @@
+/* @font-face {
+    font-family: "Bold";
+    src: local("Bold"),
+      url(./bold.ttf) format("truetype");
+} */
+
+
+#fruit{
+    padding: 20px;
+}
+
+/* p h1 h3 span h2 h4 h5 h6 div{
+    font-family: 'Times New Roman', Times, serif;
+} */
+
+#navbar{
+    display: flex;
+} 
+
+#navbar-title{
+    flex-grow: 1;
+}
+
+#navbar-title-text{
+    font-size: 15px;
+}
+
+#letGetVitamins{
+    font-size: 21px;
+    font-weight: 600;
+}
+
+#search{
+    margin-top: 8px;
+}
+
+#search .MuiFormControl-root{
+    width: 78% !important;
+}
+
+#search .MuiInputBase-root{
+    height: 50px !important;
+}
+
+#searchFilter{
+    margin-left: 10px;
+    margin-top: 8px;
+    background-color: green;
+    border-radius: 10px;
+    height: 50px;
+    padding-right: 17px;
+    padding-left: 17px;
+}
+
+.MuiInputBase-root{
+    border-radius: 12px !important;
+}
+
+.MuiFilledInput-underline:before{
+    border: 0px !important;
+}
+
+.MuiFilledInput-underline:after{
+    border: 0px !important;   
+}
+
+#fruitSlide {
+    margin-top: 18px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+#fruitSlide::-webkit-scrollbar {
+    display: none;
+}
+
+#fruitSlideItem{
+    margin-right: 15px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+#fruitSlide a{
+    text-decoration: none;
+    color: rgb(146, 140, 140);
+    font-weight: 700;
+}
+
+.fruitSlideItemActive{
+    /* padding-bottom: 13px; */
+    color: green !important;
+    border-bottom: 10px solid green;
+}
+
+#callToActionButton{
+    background-color: white;
+    font-size: 10px;
+    margin-top: 2px;
+}
+
+#dealsSection{
+    margin-top: 20px;
+    height: 35px;
+    border-radius: 10px;
+    /* background-color: green; */
+    background-image: url("./grapes.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 25px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 35px;
+    display: flex
+}
+
+#dealsSectionText{
+    color: white;
+    font-size: 14px;
+    flex-grow: 1;
+
+}
+
+.fruitGrid{
+    margin-top: 20px;
+}
+
+#fruitGridPaper{
+    padding: 10px;
+    margin-top: 15px;
+}
+
+.fruitGrid img{
+    height: 146px;
+    width: 100%;
+}
+
+#fruitGridName{
+    font-weight: 700;
+    font-size: 17px;
+}
+
+#fruitGridPrice{
+    font-weight: 700;
+    font-size: 18px;
+}
+
+#perKg{
+    font-weight: 100;
+    font-size: 14px;
+    color: grey;
+    margin-left: 4px;
+}
+
+#bottomNavSpacing{
+    margin-top: 70px;
+}
+
+#bottomNav{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100vw !important;
+    position: fixed;
+    bottom: 0;
+}
+
+#bottomNav .Mui-selected{
+    color: green !important;
+    padding: 0px;
+}
+
+#bottomNav .MuiBottomNavigationAction-root{
+    padding: 0px !important;
+}
+
+#details #fruitTitle{
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+#details #fruitSubTitle{
+    margin-top: 4px;
+    color: grey;
+    font-size: 14px;
+}
+
+#details img{
+    width: 100%;
+    height: 330px;
+}
+
+#details #quantity-button{
+    display: inline;
+    background-color: green;
+    padding: 5px;
+    border-radius: 9px;
+}
+
+#details #quantity-value{
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#fruit-main{
+    margin-top: 20px;
+}
+
+#fruit-main #description{
+    font-size: 15px;
+    font-weight: 700;
+    flex-grow: 1;
+}
+
+#fruit-main #review{
+    margin-top: 20px;
+}
+
+#rateIcon{
+    margin-bottom: -5px;
+    margin-right: 3px;
+}
+
+#addToCart{
+    margin-top: 30px;
+}
+
+#descriptionDetails{
+    font-size: 14px;
+}
+
+#addToCart #priceText{
+    font-size: 13px;
+}
+
+#addToCart #price{
+    font-size: 18px;
+    font-weight: 900;
+}
+
+#addToCartButton{
+ background-color: green;
+ padding: 10px;
+ font-size: 11px;
+ color: white;
+}
+
+#cartTitle{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#cartGridItem{
+    margin-top: 30px;
+    margin-bottom: 6px;
+}
+
+#cart{
+    margin-top: 10px;
+}
+
+#cart img{
+    width: 100%;
+}
+
+#cart #name{
+    flex-grow: 1;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+#cart #location{
+    font-size: 13px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: grey;
+}
+
+#cart #kilo{
+    font-size: 14px;
+    flex-grow: 1;
+}
+
+#cart #quantity-button1{
+    display: inline;
+    background-color: green;
+    padding: 0px;
+    border-radius: 9px;
+}
+
+#cart #quantity-value1{
+    margin-right: 3px;
+    margin-left: 3px;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+#section{
+    background-color: green;
+    padding: 0px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 25px;
+    border-radius: 25px;
+    
+}
+
+#section #card-title{
+    margin-bottom: -10px;
+    color: white;
+    font-size: 18px;
+}
+
+#section #email{
+    color: white;
+    font-size: 14px;
+}
+
+#section #avatar{
+    margin-top: 10px;
+    /* font-size: 50px; */
+    width: 55px;
+    height: 50px;
+}
+
+#section #icon{
+    margin-top: 20px;
+}
+
+#listItem{
+    margin-top: 10px;
+    margin-bottom: 6px;
+}
