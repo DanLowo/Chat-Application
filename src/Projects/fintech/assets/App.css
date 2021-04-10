@@ -99,8 +99,8 @@
 }
 
 #mySubscriptoins{
-    font-size: 19px;
-    font-weight: 800;
+    font-size: 17px;
+    font-weight: 600;
     margin-top: 30px;
 }
 
@@ -127,7 +127,7 @@
 .activeTabItem{
    color: white !important;
    font-weight: 900 !important;
-   font-size: 17px !important;
+   font-size: 13px !important;
 }
 
 #subscriptionTabLast{
@@ -139,6 +139,7 @@
 
 #subscriptionTabItem{
     color: grey;
+    font-size: 13px;
 }
 
 #subscriptions img{
@@ -148,7 +149,7 @@
 
 #subscriptions #name{
     font-size: 17px;
-    font-weight: 900;
+    font-weight: 700;
 }
 
 #subscriptions #type{
@@ -182,4 +183,9 @@
 #subscriptionPlansItem{
     margin-top: 20px;
     margin-bottom: 15px;
+}
+
+#bottomNavSpacing .Mui-selected{
+    color: blue !important;
+    padding: 0px;
 }
