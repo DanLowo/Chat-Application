@@ -10,13 +10,17 @@ import BottomNav from "./components/BottomNav"
 
 function account() {
     return (
-        <div id="fruit">
-            <Typography align="center" id="cartTitle">Account</Typography>
-            <AccountView/>
+        <div>
+            <div id="fruit">
+                <Typography align="center" id="cartTitle">Account</Typography>
+                <AccountView />
+
+            </div>
             <div id="bottomNavSpacing">
                 <BottomNav />
             </div>
         </div>
+
     )
 }
 

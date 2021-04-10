@@ -37,7 +37,7 @@
 #searchFilter{
     margin-left: 10px;
     margin-top: 8px;
-    background-color: rgb(104, 160, 104);
+    background-color: green;
     border-radius: 10px;
     height: 50px;
     padding-right: 17px;
@@ -144,7 +144,7 @@
 #bottomNav{
     padding-top: 5px;
     padding-bottom: 5px;
-    width: '100%';
+    width: 100vw !important;
     position: fixed;
     bottom: 0;
 }

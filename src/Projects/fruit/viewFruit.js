@@ -10,13 +10,17 @@ import BottomNav from "./components/BottomNav"
 
 function viewFruit() {
     return (
-        <div id="fruit">
-            <NavBar/>
-            <Details/>
+        <div>
+            <div id="fruit">
+                <NavBar />
+                <Details />
+
+            </div>
             <div id="bottomNavSpacing">
-            <BottomNav/>
+                <BottomNav />
             </div>
         </div>
+
     )
 }
 

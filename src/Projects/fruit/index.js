@@ -12,17 +12,18 @@ import BottomNav from "./components/BottomNav"
 
 function index() {
     return (
+        <div>
         <div id="fruit">
-            
             <Navbar/>
             <Search/>
             <FruitSlide/>
             <CallToAction/>
             <FruitGrid/>
+        </div>
+
             <div id="bottomNavSpacing">
-            <BottomNav/>
+                <BottomNav/>
             </div>
-            
         </div>
     )
 }
