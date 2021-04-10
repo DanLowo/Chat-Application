@@ -39,7 +39,7 @@
     background-color: rgb(65, 6, 65);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 2px 2px 2px 2px rgb(190, 181, 181);
+    box-shadow: 2px 2px 2px 2px rgb(209, 202, 202);
 }
 
 #cardHeader{
@@ -96,4 +96,47 @@
     width: 35px;
     height: 27px;
     margin-top: 3px;
+}
+
+#mySubscriptoins{
+    font-size: 19px;
+    font-weight: 800;
+    margin-top: 30px;
+}
+
+#subscriptionTabs{
+    margin-top: 10px;
+    background-color: rgb(236, 228, 236);
+    border-radius: 10px;
+    width: 100%;
+    height: 45px;
+}
+
+#subscriptionTab{
+    display: inline-block;
+    padding-top: 12px;
+    width: 33%;
+    height: 33px;
+}
+
+.activeTab{
+    background-color: blue;
+    border-radius: 10px;
+}
+
+.activeTabItem{
+   color: white !important;
+   font-weight: 900 !important;
+   font-size: 17px !important;
+}
+
+#subscriptionTabLast{
+    display: inline-block;
+    width: 34%;
+    padding-top: 12px;
+    height: 33px;
+}
+
+#subscriptionTabItem{
+    color: grey;
 }

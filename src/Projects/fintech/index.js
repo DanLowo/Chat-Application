@@ -4,6 +4,7 @@ import "./assets/App.css"
 
 import Navbar from "./components/navbar"
 import Card from "./components/card"
+import Subscriptions from "./components/Subscriptions"
 
 function index() {
     return (
@@ -11,6 +12,7 @@ function index() {
             <div id="fintech">
                 <Navbar/>
                 <Card/>
+                <Subscriptions/>
             </div>
             
         </div>
