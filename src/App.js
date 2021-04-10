@@ -1,5 +1,3 @@
-import HiringDesign from './Projects/hiring/index'
-import ViewJob from './Projects/hiring/viewJob'
 
 // import all pages for hiring design
 import HiringDesign from './Projects/hiring/index'
