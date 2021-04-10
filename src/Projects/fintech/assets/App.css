@@ -1,3 +1,9 @@
+#fintech{
+    padding: 15px;
+    padding-right: 13px;
+    padding-left: 13px;
+}
+
 #navbar{
     display: flex;
 }
@@ -7,6 +13,23 @@
 }
 
 #navbar-title{
-    font-size: 14px;
+    margin-top: 5px;
+    font-size: 15px;
     color: grey;
+}
+
+#navbar #avatar{
+    display: inline-flex;
+    height: 30px;
+    width: 30px;
+}
+
+#navbar #notification{
+    margin-top: -14px;
+}
+
+#keepTrack{
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: -5px;
 }
