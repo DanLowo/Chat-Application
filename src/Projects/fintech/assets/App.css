@@ -33,3 +33,67 @@
     font-weight: 700;
     margin-top: -5px;
 }
+
+#card{
+    margin-top: 20px;
+    background-color: rgb(65, 6, 65);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(190, 181, 181);
+}
+
+#cardHeader{
+    display: flex;
+    margin-bottom: 40px;
+}
+
+#cardHeaderDebit{
+    font-size: 13px;
+    flex-grow: 1;
+    color: white;
+}
+
+#cardHeaderBankName{
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+}
+
+#cardNumber{
+    font-size: 16px;
+    flex-grow: 1;
+    color: white;
+}
+
+#cardNumberAndChip{
+    display: flex;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#cardChip{
+    height: 30px;
+    width: 30px;
+    margin-top: -7px;
+}
+
+#cardHolder{
+    font-size: 10px;
+    padding: 0px;
+    margin: 2px;
+    color: white;
+}
+
+#cardHolderName{
+    font-size: 15px;
+    color: white;
+    padding: 0px;
+    margin: 4px;
+    margin-left: 0px;
+}
+
+#masterCard{
+    width: 35px;
+    height: 27px;
+    margin-top: 3px;
+}
