@@ -140,3 +140,46 @@
 #subscriptionTabItem{
     color: grey;
 }
+
+#subscriptions img{
+    width: 40px;
+    height: 35px;
+}
+
+#subscriptions #name{
+    font-size: 17px;
+    font-weight: 900;
+}
+
+#subscriptions #type{
+    font-size: 15px;
+}
+
+#subscriptions .dueToday{
+    font-size: 14px !important;
+    color: red !important;
+}
+
+#subscriptions #paper{
+    width: 40px;
+    padding: 10px;
+    padding-bottom: 7px;
+}
+
+#subscriptions #details{
+    padding-top: 9px;
+    padding-left: 15px;
+}
+
+#subscriptions #price{
+    padding-top: 9px;
+}
+
+#subscriptions #due{
+    font-size: 14px;   
+}
+
+#subscriptionPlansItem{
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
