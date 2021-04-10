@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 import HiringDesign from './Projects/hiring/index'
 import ViewJob from './Projects/hiring/viewJob'
-=======
 
 // import all pages for hiring design
 import HiringDesign from './Projects/hiring/index'
@@ -12,7 +10,7 @@ import FruitDesign from "./Projects/fruit/index"
 import ViewFruit from "./Projects/fruit/viewFruit"
 import Cart from "./Projects/fruit/cart"
 import Account from "./Projects/fruit/account"
->>>>>>> master
+
 
 import { Switch, Route } from "react-router-dom"
 
