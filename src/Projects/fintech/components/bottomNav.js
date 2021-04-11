@@ -20,7 +20,7 @@ function BottomNav() {
                     setValue(newValue);
                 }}>
                 <BottomNavigationAction value="/fintech" component={Link} to="/fintech" label="Home" icon={<HomeOutlinedIcon />} />
-                <BottomNavigationAction label="Cards" icon={<PaymentOutlinedIcon />} />
+                <BottomNavigationAction value="/fintech/cards" label="Cards" component={Link} to="/fintech/cards" icon={<PaymentOutlinedIcon />} />
                 <BottomNavigationAction value="/fintech/subscriptions" component={Link} to="/fintech/subscriptions" label="Subscriptions" icon={<SubscriptionsOutlinedIcon />} />
                 <BottomNavigationAction component={Link} to="/fruits/account" label="Profile" icon={<PersonOutlineOutlinedIcon />} />
             </BottomNavigation>

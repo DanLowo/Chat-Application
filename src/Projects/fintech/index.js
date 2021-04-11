@@ -13,7 +13,7 @@ function index() {
             <div id="fintech">
                 <Navbar/>
                 <Card/>
-                <Subscriptions show={true}/>
+                <Subscriptions show={true} sectionTitle="My Subscriptions" showTabs={true}/>
             </div>
             <div id="bottomNavSpacing">
                 <BottomNav/>

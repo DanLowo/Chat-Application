@@ -17,7 +17,7 @@ import Dstv from "../assets/dstv.jpg"
 import LinkedIn from "../assets/linkedin.webp"
 import NoSubscription from "../assets/subscriptions.png"
 
-function Subscriptions({ show }) {
+function Subscriptions({ show, sectionTitle, showTabs }) {
 
     const ok = {
         All: true,
@@ -99,21 +99,23 @@ function Subscriptions({ show }) {
 
     return (
         <div id="subscriptions">
-            <Typography id="mySubscriptoins">My Subscriptions</Typography>
+            <Typography id="mySubscriptoins"> {sectionTitle} </Typography>
 
             {show ? (
                 <div>
-                    <div id="subscriptionTabs">
-                        <div id="subscriptionTab" className={activeTab.All ? 'activeTab' : ''} align="center" onClick={() => handleSetTab('All')}>
-                            <span className={activeTab.All ? 'activeTabItem' : ''} id="subscriptionTabItem" align="center">All</span>
+                    {showTabs ? (
+                        <div id="subscriptionTabs">
+                            <div id="subscriptionTab" className={activeTab.All ? 'activeTab' : ''} align="center" onClick={() => handleSetTab('All')}>
+                                <span className={activeTab.All ? 'activeTabItem' : ''} id="subscriptionTabItem" align="center">All</span>
+                            </div>
+                            <div id="subscriptionTab" className={activeTab.Upcoming ? 'activeTab' : ''} align="center" onClick={() => handleSetTab('Upcoming')}>
+                                <span className={activeTab.Upcoming ? 'activeTabItem' : ''} id="subscriptionTabItem">Upcoming</span>
+                            </div>
+                            <div id="subscriptionTabLast" className={activeTab.Pending ? 'activeTab' : ''} align="center" onClick={() => handleSetTab('Pending')}>
+                                <span className={activeTab.Pending ? 'activeTabItem' : ''} id="subscriptionTabItem">Pending</span>
+                            </div>
                         </div>
-                        <div id="subscriptionTab" className={activeTab.Upcoming ? 'activeTab' : ''} align="center" onClick={() => handleSetTab('Upcoming')}>
-                            <span className={activeTab.Upcoming ? 'activeTabItem' : ''} id="subscriptionTabItem">Upcoming</span>
-                        </div>
-                        <div id="subscriptionTabLast" className={activeTab.Pending ? 'activeTab' : ''} align="center" onClick={() => handleSetTab('Pending')}>
-                            <span className={activeTab.Pending ? 'activeTabItem' : ''} id="subscriptionTabItem">Pending</span>
-                        </div>
-                    </div>
+                    ) : ''}
 
                     <div id="subscriptionPlans">
                         {activeTab.All &&
@@ -190,7 +192,7 @@ function Subscriptions({ show }) {
                     <div align="center">
                         <img alt="no subscriptions" src={NoSubscription} id="noSubscriptionsImg" />
                         <Typography id="noSubscriptionsText">Looks like you don't have any subscription add yet</Typography>
-                        <Button startIcon={<AddIcon/>} fullWidth variant="outlined" color="primary" id="noSubscriptionsButton">Add new subscription</Button>
+                        <Button startIcon={<AddIcon />} fullWidth variant="outlined" color="primary" id="noSubscriptionsButton">Add new subscription</Button>
                     </div>
                 )
             }
