@@ -19,9 +19,9 @@ function BottomNav() {
                 onChange={(event, newValue) => {
                     setValue(newValue);
                 }}>
-                <BottomNavigationAction component={Link} to="/fruit" label="Home" icon={<HomeOutlinedIcon />} />
+                <BottomNavigationAction component={Link} to="/fintech" label="Home" icon={<HomeOutlinedIcon />} />
                 <BottomNavigationAction label="Cards" icon={<PaymentOutlinedIcon />} />
-                <BottomNavigationAction component={Link} to="/fruits/cart" label="Subscriptions" icon={<SubscriptionsOutlinedIcon />} />
+                <BottomNavigationAction component={Link} to="/fintech/subscriptions" label="Subscriptions" icon={<SubscriptionsOutlinedIcon />} />
                 <BottomNavigationAction component={Link} to="/fruits/account" label="Profile" icon={<PersonOutlineOutlinedIcon />} />
             </BottomNavigation>
         </div>

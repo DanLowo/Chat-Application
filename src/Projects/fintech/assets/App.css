@@ -185,6 +185,22 @@
     margin-bottom: 15px;
 }
 
+#noSubscriptionsImg{
+    margin-top: 16px;
+    width: 110px !important;
+    height: 115px !important;
+}
+
+#noSubscriptionsText{
+    font-size: 14px;
+}
+
+#noSubscriptionsButton{
+    margin-top: 30px;
+    padding: 10px;
+    text-transform: none !important;
+}
+
 #bottomNavSpacing .Mui-selected{
     color: blue !important;
     padding: 0px;

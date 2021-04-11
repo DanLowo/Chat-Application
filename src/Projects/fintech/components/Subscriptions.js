@@ -4,6 +4,9 @@ import Typography from "@material-ui/core/Typography"
 import Grid from "@material-ui/core/Grid"
 import Divider from "@material-ui/core/Divider"
 import Paper from "@material-ui/core/Paper"
+import Button from "@material-ui/core/Button"
+
+import AddIcon from "@material-ui/icons/AddCircle"
 
 // import imagese
 import Netflix from "../assets/netflix.jpeg"
@@ -12,8 +15,9 @@ import Medium from "../assets/medium.png"
 import Adobe from "../assets/adobe.png"
 import Dstv from "../assets/dstv.jpg"
 import LinkedIn from "../assets/linkedin.webp"
+import NoSubscription from "../assets/subscriptions.png"
 
-function Subscriptions() {
+function Subscriptions({ show }) {
 
     const ok = {
         All: true,
@@ -97,88 +101,99 @@ function Subscriptions() {
         <div id="subscriptions">
             <Typography id="mySubscriptoins">My Subscriptions</Typography>
 
-            <div id="subscriptionTabs">
-                <div id="subscriptionTab" className={activeTab.All ? 'activeTab' : ''} align="center" onClick={() => handleSetTab('All')}>
-                    <span className={activeTab.All ? 'activeTabItem' : ''} id="subscriptionTabItem" align="center">All</span>
-                </div>
-                <div id="subscriptionTab" className={activeTab.Upcoming ? 'activeTab' : ''} align="center" onClick={() => handleSetTab('Upcoming')}>
-                    <span className={activeTab.Upcoming ? 'activeTabItem' : ''} id="subscriptionTabItem">Upcoming</span>
-                </div>
-                <div id="subscriptionTabLast" className={activeTab.Pending ? 'activeTab' : ''} align="center" onClick={() => handleSetTab('Pending')}>
-                    <span className={activeTab.Pending ? 'activeTabItem' : ''} id="subscriptionTabItem">Pending</span>
-                </div>
-            </div>
-
-            <div id="subscriptionPlans">
-                {activeTab.All &&
-                    allSubscription.map(subscription => (
-                        <div key={subscription.name}>
-                            <Grid container id="subscriptionPlansItem">
-                                <Grid item xs={2} sm={2} md={2}>
-                                    <Paper id="paper">
-                                        <img alt={subscription.name} src={subscription.img} />
-                                    </Paper>
-                                </Grid>
-                                <Grid item xs={7} sm={7} md={7} id="details">
-                                    <Typography id="name"> {subscription.name} </Typography>
-                                    <Typography id="type"> {subscription.type} </Typography>
-                                </Grid>
-                                <Grid item xs={3} sm={3} md={3} id="price">
-                                    <Typography id="name"> N {subscription.price} </Typography>
-                                    <Typography className={subscription.due === 'Today' ? 'dueToday' : ''} id="due"> Due: {subscription.due} </Typography>
-                                </Grid>
-                            </Grid>
-                            <Divider />
+            {show ? (
+                <div>
+                    <div id="subscriptionTabs">
+                        <div id="subscriptionTab" className={activeTab.All ? 'activeTab' : ''} align="center" onClick={() => handleSetTab('All')}>
+                            <span className={activeTab.All ? 'activeTabItem' : ''} id="subscriptionTabItem" align="center">All</span>
                         </div>
-                    ))
-                }
-
-                {activeTab.Upcoming &&
-                    UpcomingSubscription.map(subscription => (
-                        <div key={subscription.name}>
-                            <Grid container id="subscriptionPlansItem">
-                                <Grid item xs={2} sm={2} md={2}>
-                                    <Paper id="paper">
-                                        <img alt={subscription.name} src={subscription.img} />
-                                    </Paper>
-                                </Grid>
-                                <Grid item xs={7} sm={7} md={7} id="details">
-                                    <Typography id="name"> {subscription.name} </Typography>
-                                    <Typography id="type"> {subscription.type} </Typography>
-                                </Grid>
-                                <Grid item xs={3} sm={3} md={3} id="price">
-                                    <Typography id="name"> N {subscription.price} </Typography>
-                                    <Typography className={subscription.due === 'Today' ? 'dueToday' : ''} id="due"> Due: {subscription.due} </Typography>
-                                </Grid>
-                            </Grid>
-                            <Divider />
+                        <div id="subscriptionTab" className={activeTab.Upcoming ? 'activeTab' : ''} align="center" onClick={() => handleSetTab('Upcoming')}>
+                            <span className={activeTab.Upcoming ? 'activeTabItem' : ''} id="subscriptionTabItem">Upcoming</span>
                         </div>
-                    ))
-                }
-
-                {activeTab.Pending &&
-                    PendingSubscription.map(subscription => (
-                        <div key={subscription.name}>
-                            <Grid container id="subscriptionPlansItem">
-                                <Grid item xs={2} sm={2} md={2}>
-                                    <Paper id="paper">
-                                        <img alt={subscription.name} src={subscription.img} />
-                                    </Paper>
-                                </Grid>
-                                <Grid item xs={7} sm={7} md={7} id="details">
-                                    <Typography id="name"> {subscription.name} </Typography>
-                                    <Typography id="type"> {subscription.type} </Typography>
-                                </Grid>
-                                <Grid item xs={3} sm={3} md={3} id="price">
-                                    <Typography id="name"> N {subscription.price} </Typography>
-                                    <Typography className={subscription.due === 'Today' ? 'dueToday' : ''} id="due"> Due: {subscription.due} </Typography>
-                                </Grid>
-                            </Grid>
-                            <Divider />
+                        <div id="subscriptionTabLast" className={activeTab.Pending ? 'activeTab' : ''} align="center" onClick={() => handleSetTab('Pending')}>
+                            <span className={activeTab.Pending ? 'activeTabItem' : ''} id="subscriptionTabItem">Pending</span>
                         </div>
-                    ))
-                }
-            </div>
+                    </div>
+
+                    <div id="subscriptionPlans">
+                        {activeTab.All &&
+                            allSubscription.map(subscription => (
+                                <div key={subscription.name}>
+                                    <Grid container id="subscriptionPlansItem">
+                                        <Grid item xs={2} sm={2} md={2}>
+                                            <Paper id="paper">
+                                                <img alt={subscription.name} src={subscription.img} />
+                                            </Paper>
+                                        </Grid>
+                                        <Grid item xs={7} sm={7} md={7} id="details">
+                                            <Typography id="name"> {subscription.name} </Typography>
+                                            <Typography id="type"> {subscription.type} </Typography>
+                                        </Grid>
+                                        <Grid item xs={3} sm={3} md={3} id="price">
+                                            <Typography id="name"> N {subscription.price} </Typography>
+                                            <Typography className={subscription.due === 'Today' ? 'dueToday' : ''} id="due"> Due: {subscription.due} </Typography>
+                                        </Grid>
+                                    </Grid>
+                                    <Divider />
+                                </div>
+                            ))
+                        }
+
+                        {activeTab.Upcoming &&
+                            UpcomingSubscription.map(subscription => (
+                                <div key={subscription.name}>
+                                    <Grid container id="subscriptionPlansItem">
+                                        <Grid item xs={2} sm={2} md={2}>
+                                            <Paper id="paper">
+                                                <img alt={subscription.name} src={subscription.img} />
+                                            </Paper>
+                                        </Grid>
+                                        <Grid item xs={7} sm={7} md={7} id="details">
+                                            <Typography id="name"> {subscription.name} </Typography>
+                                            <Typography id="type"> {subscription.type} </Typography>
+                                        </Grid>
+                                        <Grid item xs={3} sm={3} md={3} id="price">
+                                            <Typography id="name"> N {subscription.price} </Typography>
+                                            <Typography className={subscription.due === 'Today' ? 'dueToday' : ''} id="due"> Due: {subscription.due} </Typography>
+                                        </Grid>
+                                    </Grid>
+                                    <Divider />
+                                </div>
+                            ))
+                        }
+
+                        {activeTab.Pending &&
+                            PendingSubscription.map(subscription => (
+                                <div key={subscription.name}>
+                                    <Grid container id="subscriptionPlansItem">
+                                        <Grid item xs={2} sm={2} md={2}>
+                                            <Paper id="paper">
+                                                <img alt={subscription.name} src={subscription.img} />
+                                            </Paper>
+                                        </Grid>
+                                        <Grid item xs={7} sm={7} md={7} id="details">
+                                            <Typography id="name"> {subscription.name} </Typography>
+                                            <Typography id="type"> {subscription.type} </Typography>
+                                        </Grid>
+                                        <Grid item xs={3} sm={3} md={3} id="price">
+                                            <Typography id="name"> N {subscription.price} </Typography>
+                                            <Typography className={subscription.due === 'Today' ? 'dueToday' : ''} id="due"> Due: {subscription.due} </Typography>
+                                        </Grid>
+                                    </Grid>
+                                    <Divider />
+                                </div>
+                            ))
+                        }
+                    </div>
+                </div>
+            ) : (
+                    <div align="center">
+                        <img alt="no subscriptions" src={NoSubscription} id="noSubscriptionsImg" />
+                        <Typography id="noSubscriptionsText">Looks like you don't have any subscription add yet</Typography>
+                        <Button startIcon={<AddIcon/>} fullWidth variant="outlined" color="primary" id="noSubscriptionsButton">Add new subscription</Button>
+                    </div>
+                )
+            }
         </div>
     )
 }

@@ -3,14 +3,17 @@
 import HiringDesign from './Projects/hiring/index'
 import ViewJob from './Projects/hiring/viewJob'
 
+
 // import all pages for fruit design
 import FruitDesign from "./Projects/fruit/index"
 import ViewFruit from "./Projects/fruit/viewFruit"
 import Cart from "./Projects/fruit/cart"
 import Account from "./Projects/fruit/account" 
 
+
 // import all pages from fintech design
 import FintechDesign from "./Projects/fintech/index"
+import Subscriptions from "./Projects/fintech/subscriptions"
 
 
 import { Switch, Route } from "react-router-dom"
@@ -46,6 +49,9 @@ function App() {
         {/* set all fintech design routes */}
           <Route exact path="/fintech">
               <FintechDesign/>
+          </Route>
+          <Route path="/fintech/subscriptions">
+              <Subscriptions/>
           </Route>
 
       </Switch>
