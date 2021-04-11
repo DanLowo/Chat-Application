@@ -11,17 +11,17 @@ import PaymentOutlinedIcon from '@material-ui/icons/PaymentOutlined';
 import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
 
 function BottomNav() {
-
-    const [value, setValue] = useState(0);
+    const pathname = window.location.pathname
+    const [value, setValue] = useState(pathname);
     return (
         <div>
             <BottomNavigation id="bottomNav" showLabels value={value}
                 onChange={(event, newValue) => {
                     setValue(newValue);
                 }}>
-                <BottomNavigationAction component={Link} to="/fintech" label="Home" icon={<HomeOutlinedIcon />} />
+                <BottomNavigationAction value="/fintech" component={Link} to="/fintech" label="Home" icon={<HomeOutlinedIcon />} />
                 <BottomNavigationAction label="Cards" icon={<PaymentOutlinedIcon />} />
-                <BottomNavigationAction component={Link} to="/fintech/subscriptions" label="Subscriptions" icon={<SubscriptionsOutlinedIcon />} />
+                <BottomNavigationAction value="/fintech/subscriptions" component={Link} to="/fintech/subscriptions" label="Subscriptions" icon={<SubscriptionsOutlinedIcon />} />
                 <BottomNavigationAction component={Link} to="/fruits/account" label="Profile" icon={<PersonOutlineOutlinedIcon />} />
             </BottomNavigation>
         </div>

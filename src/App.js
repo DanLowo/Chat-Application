@@ -14,6 +14,7 @@ import Account from "./Projects/fruit/account"
 // import all pages from fintech design
 import FintechDesign from "./Projects/fintech/index"
 import Subscriptions from "./Projects/fintech/subscriptions"
+import Notifications from "./Projects/fintech/notifications"
 
 
 import { Switch, Route } from "react-router-dom"
@@ -50,8 +51,11 @@ function App() {
           <Route exact path="/fintech">
               <FintechDesign/>
           </Route>
-          <Route path="/fintech/subscriptions">
+          <Route exact path="/fintech/subscriptions">
               <Subscriptions/>
+          </Route>
+          <Route exact path="/fintech/notifications">
+              <Notifications/>
           </Route>
 
       </Switch>

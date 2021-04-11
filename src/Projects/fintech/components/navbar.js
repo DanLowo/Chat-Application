@@ -1,5 +1,7 @@
 import React from 'react'
 
+import {Link} from "react-router-dom"
+
 // import MUI components
 import Typography from "@material-ui/core/Typography"
 import Avatar from "@material-ui/core/Avatar"
@@ -16,8 +18,8 @@ function navbar() {
                 </span>
                 <span>
                     <Avatar id="avatar" src="https://material-ui.com/static/images/avatar/2.jpg" />
-                    <IconButton id="notification">
-                        <Badge badgeContent={3} color="secondary">
+                    <IconButton component={Link} to="/fintech/notifications" id="notification">
+                        <Badge badgeContent={0} showZero color="secondary">
                             <Notification fontSize="medium" />
                         </Badge>
                     </IconButton>

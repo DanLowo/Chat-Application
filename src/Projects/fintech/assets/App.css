@@ -205,3 +205,34 @@
     color: blue !important;
     padding: 0px;
 }
+
+#dynamicBar{
+    display: flex;
+}
+
+#dynamicBar .MuiIconButton-root{
+    padding: 0px !important;
+}
+
+#dynamicBarIcon{
+    flex-grow: 0.5;
+    display: inline;
+}
+
+#dynamicBarText{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+#noNotification{
+    margin-top: 100px;
+    padding: 30px;
+}
+
+#noNotification img{
+    width: 100px !important;
+    height: 100px !important;
+    margin-bottom: 10px;
+}
