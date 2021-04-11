@@ -191,7 +191,7 @@ function Subscriptions({ show, sectionTitle, showTabs }) {
             ) : (
                     <div align="center">
                         <img alt="no subscriptions" src={NoSubscription} id="noSubscriptionsImg" />
-                        <Typography id="noSubscriptionsText">Looks like you don't have any subscription add yet</Typography>
+                        <Typography id="noSubscriptionsText">Looks like you don't <br/> have any subscription add yet</Typography>
                         <Button startIcon={<AddIcon />} fullWidth variant="outlined" color="primary" id="noSubscriptionsButton">Add new subscription</Button>
                     </div>
                 )
