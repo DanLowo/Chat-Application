@@ -17,6 +17,7 @@ import Subscriptions from "./Projects/fintech/subscriptions"
 import Notifications from "./Projects/fintech/notifications"
 import Cards from "./Projects/fintech/cards"
 import NewCard from "./Projects/fintech/newCard"
+import Profile from "./Projects/fintech/profile"
 
 
 import { Switch, Route } from "react-router-dom"
@@ -64,6 +65,9 @@ function App() {
           </Route>
           <Route path="/fintech/new-card">
               <NewCard/>
+          </Route>
+          <Route path="/fintech/profile">
+              <Profile/>
           </Route>
 
       </Switch>
