@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from "react-router-dom"
 
 import "./assets/App.css"
 
@@ -15,8 +16,8 @@ function Cards() {
         <div>
             <div id="fintech">
                 <DynamicBar title="My Cards" />
-                <Card/>
-                <Button startIcon={<AddIcon />} fullWidth variant="outlined" color="primary" id="noSubscriptionsButton">Add New Card</Button>
+                <Card name="Damilola Francis" expiryDate="02/24" number="5696 **** **** **69"/>
+                <Button component={Link} to="/fintech/new-card" startIcon={<AddIcon />} fullWidth variant="outlined" color="primary" id="noSubscriptionsButton">Add New Card</Button>
                 <Subscriptions show={true} sectionTitle="Linked Subscriptions" showTabs={false}/>
             </div>
             <div id="bottomNavSpacing">

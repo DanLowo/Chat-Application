@@ -10,7 +10,7 @@ function subscriptions() {
         <div>
             <div id="fintech">
                 <Navbar/>
-                <Card/>
+                <Card name="Damilola Francis" expiryDate="02/24" number="5696 **** **** **69"/>
                 <Subscriptions show={false}/>
             </div>
             <div id="bottomNavSpacing">

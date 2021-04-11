@@ -16,6 +16,7 @@ import FintechDesign from "./Projects/fintech/index"
 import Subscriptions from "./Projects/fintech/subscriptions"
 import Notifications from "./Projects/fintech/notifications"
 import Cards from "./Projects/fintech/cards"
+import NewCard from "./Projects/fintech/newCard"
 
 
 import { Switch, Route } from "react-router-dom"
@@ -60,6 +61,9 @@ function App() {
           </Route>
           <Route path="/fintech/cards">
               <Cards/>
+          </Route>
+          <Route path="/fintech/new-card">
+              <NewCard/>
           </Route>
 
       </Switch>

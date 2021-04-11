@@ -12,7 +12,7 @@ function index() {
         <div>
             <div id="fintech">
                 <Navbar/>
-                <Card/>
+                <Card name="Damilola Francis" expiryDate="02/24" number="5696 **** **** **69"/>
                 <Subscriptions show={true} sectionTitle="My Subscriptions" showTabs={true}/>
             </div>
             <div id="bottomNavSpacing">
