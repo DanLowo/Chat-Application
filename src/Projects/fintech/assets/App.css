@@ -252,3 +252,16 @@
     margin-bottom: 7px;
     font-weight: 600;
 }
+
+#addedCardImg{
+    width: 90px !important;
+    height: 95px !important;
+}
+
+#addCardDrawer{
+    height: 40vh !important;
+    margin: 30px;
+    /* padding-bottom: 30px; */
+    /* margin-bottom: 50px; */
+    /* margin-top: 30px; */
+}
