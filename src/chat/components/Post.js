@@ -66,7 +66,7 @@ function Post() {
         <CardHeader
           avatar={<Avatar src={Image} className={styles.avatar} />}
           action={
-            <IconButton size="large">
+            <IconButton>
               <MoreVertIcon />
             </IconButton>
           }
@@ -86,7 +86,7 @@ function Post() {
             <div>
             <Avatar className={styles.viewedUserImages} src={Image3} />
           {viewedUserImages.map(user => (
-              <Avatar className={styles.viewedUserImages1} src={user} />
+              <Avatar key={user} className={styles.viewedUserImages1} src={user} />
           ))}
         </div>
         </CardContent>

@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Avatar from "@material-ui/core/Avatar";
-import Add from "@material-ui/icons/Add";
+// import Add from "@material-ui/icons/Add";
 import Paper from "@material-ui/core/Paper";
 
 import Image from "../assets/avatar1.jpeg"
@@ -45,7 +45,7 @@ function Stories() {
             <Add fontSize="large" />
           </Avatar> */}
           {stories.map((story, k) => (
-            <Avatar variant="circle" src={story} className={styles.storyAvatar} key={k} align="center">
+            <Avatar variant="circular" src={story} className={styles.storyAvatar} key={k} align="center">
         
             </Avatar>
           ))}
