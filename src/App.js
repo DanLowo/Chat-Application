@@ -2,11 +2,11 @@
 import "./chat/assets/app.css"
 
 import Index from "./chat/index"
-import Chat from "./chat/chat"
+import Messenger from "./chat/Messenger"
+import Chat from "./chat/Chat"
 
 import { Switch, Route } from "react-router-dom"
 import Bottombar from "./chat/components/Bottombar"
-
 
 function App() {
   return <div className="App">
@@ -16,12 +16,15 @@ function App() {
               <Index/>
           </Route>
           <Route path="/chats">
-              <Chat/>
+              <Messenger/>
           </Route>
-
+          <Route path="/chat">
+            <Chat/>
+          </Route>
       </Switch>
 
-      <Bottombar/>
+      {window.location.pathname !== '/chat' && <Bottombar/>}
+      
   </div>;
 }
 

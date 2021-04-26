@@ -1,14 +1,14 @@
 import React from 'react'
-import ChatNavBar from './components/ChatNavBar'
+import MessengerNavBar from './components/MessengerNavBar'
 import UserMessage from './components/UserMessage'
 
-function chat() {
+function Messenger() {
     return (
         <div>
-            <ChatNavBar/>
+            <MessengerNavBar/>
             <UserMessage/>
         </div>
     )
 }
 
-export default chat
+export default Messenger

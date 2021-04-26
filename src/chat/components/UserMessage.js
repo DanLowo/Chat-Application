@@ -1,6 +1,7 @@
 import React from "react";
 
 import { makeStyles } from "@material-ui/core/styles";
+import {Link} from "react-router-dom"
 
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
@@ -37,8 +38,8 @@ const customStyles = makeStyles(() => ({
 function UserMessage() {
   const styles = customStyles();
   return (
-    <div>
-      <Card className={styles.root} elevation={0}>
+    <div className="userMessage">
+      <Card component={Link} to="/chat" className={styles.root} elevation={0}>
         <CardHeader
           avatar={<Avatar src={Image} className={styles.userImage} />}
           action={

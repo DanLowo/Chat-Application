@@ -13,3 +13,7 @@ body{
 .MuiBottomNavigation-root{
     height: 62px !important;
 }
+
+.userMessage a{
+    text-decoration: none !important;
+}
