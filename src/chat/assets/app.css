@@ -5,3 +5,9 @@ body{
 .makeStyles-storiesDiv-8::-webkit-scrollbar{
     display: none;
 }
+
+.MuiAvatar-img{
+    border-radius: 50% !important;
+    /* width: 80px !important;
+    height: 80px !important; */
+}

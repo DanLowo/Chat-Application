@@ -17,6 +17,7 @@ const customStyles = makeStyles(() => ({
   navbarHeader: {
     display: "inline",
     flexGrow: 1,
+    fontSize: '25px'
   },
   navbarSpan: {
     marginTop: "22px",
@@ -39,11 +40,11 @@ function Navbar() {
         </h1>
         <span className={styles.navbarSpan}>
           <Badge badgeContent={1} color="secondary">
-            <Notifications fontSize="large" className={styles.navbarIcon} />
+            <Notifications className={styles.navbarIcon} />
           </Badge>
         </span>
         <span className={styles.navbarSpan}>
-          <Search fontSize="large" className={styles.navbarIcon} />
+          <Search className={styles.navbarIcon} />
         </span>
       </div>
     </Paper>

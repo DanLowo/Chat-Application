@@ -1,28 +1,18 @@
-import React from 'react'
-import Navbar from "./components/Navbar"
-import Stories from './components/Stories'
-
-
-// import { makeStyles } from "@material-ui/core/styles"
-
-
-// const customStyles = makeStyles(() => ({
-//     root: {
-//         backgroundColor: 'grey',
-//         height: '100vh'
-//     }
-// }))
+import React from "react";
+import Navbar from "./components/Navbar";
+import Post from "./components/Post";
+import Stories from "./components/Stories";
 
 function index() {
-
-    // const classes = customStyles()
-
-    return (
-        <div>
-            <Navbar/>
-            <Stories/>
-        </div>
-    )
+  return (
+    <div>
+      <Navbar />
+      <Stories />
+      {[1, 2, 3].map((i) => (
+        <Post key={i} />
+      ))}
+    </div>
+  );
 }
 
-export default index
+export default index;
