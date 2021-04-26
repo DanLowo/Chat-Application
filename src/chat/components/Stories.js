@@ -24,7 +24,7 @@ const customStyles = makeStyles(() => ({
   },
   storyAvatar: {
     display: "inline-block",
-    marginRight: "20px",
+    marginRight: "12px",
     width: '60px',
     height: '60px',
     border: '3px solid #8181e2'
@@ -41,9 +41,6 @@ function Stories() {
       <div className={styles.root}>
         <h1 className={styles.storiesHeader}> Short Stories</h1>
         <div className={styles.storiesDiv}>
-          {/* <Avatar className={styles.storyAvatar} align="center">
-            <Add fontSize="large" />
-          </Avatar> */}
           {stories.map((story, k) => (
             <Avatar variant="circular" src={story} className={styles.storyAvatar} key={k} align="center">
         

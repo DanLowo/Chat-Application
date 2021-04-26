@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Post from "./components/Post";
 import Stories from "./components/Stories";
+import Bottombar from "./components/Bottombar";
 
 function index() {
   return (
@@ -11,6 +12,8 @@ function index() {
       {[1, 2, 3].map((i) => (
         <Post key={i} />
       ))}
+
+      <Bottombar/>
     </div>
   );
 }
