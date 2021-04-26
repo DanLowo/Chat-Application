@@ -2,7 +2,6 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Post from "./components/Post";
 import Stories from "./components/Stories";
-import Bottombar from "./components/Bottombar";
 
 function index() {
   return (
@@ -13,7 +12,6 @@ function index() {
         <Post key={i} />
       ))}
 
-      <Bottombar/>
     </div>
   );
 }
