@@ -1,5 +1,7 @@
 body{
-    margin: 13px !important;
-    margin-top: 0px !important;
-    background-color: rgb(245, 237, 237);
+    margin: 0px !important;
+}
+
+.makeStyles-storiesDiv-8::-webkit-scrollbar{
+    display: none;
 }

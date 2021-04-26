@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from "./components/Navbar"
+import Stories from './components/Stories'
 
 
 // import { makeStyles } from "@material-ui/core/styles"
@@ -19,6 +20,7 @@ function index() {
     return (
         <div>
             <Navbar/>
+            <Stories/>
         </div>
     )
 }
