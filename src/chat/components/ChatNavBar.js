@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useContext} from 'react'
 
 import {useHistory} from "react-router-dom"
 
@@ -10,6 +10,7 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft"
 import VideoIcon from "@material-ui/icons/VideoCallOutlined"
 import CallIcon from '@material-ui/icons/CallOutlined'
 import InfoIcon from "@material-ui/icons/InfoOutlined"
+import ChatContext from '../context/ChatContext';
 
 const customStyles = makeStyles(() => ({
     root: {
@@ -45,6 +46,8 @@ const customStyles = makeStyles(() => ({
 
 function ChatNavBar() {
 
+    const context = useContext(ChatContext)
+
     const history = useHistory()
 
     const styles = customStyles()
@@ -55,7 +58,7 @@ function ChatNavBar() {
                     <ChevronLeftIcon/>
                 </IconButton>
                 <span className={styles.userBar}>
-                    <p className={styles.userName}> <b>Godaddy Inc.</b> </p>
+                    <p className={styles.userName}> <b> {context.user.userName} </b> </p>
                     <p className={styles.userLastSeen}>Last seen 22 seconds ago</p>
                 </span>
                 <IconButton>

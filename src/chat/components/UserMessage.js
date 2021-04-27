@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import ChatContext from "../context/ChatContext"
 
 import { makeStyles } from "@material-ui/core/styles";
-import { Link } from "react-router-dom"
+import { useHistory } from "react-router-dom"
 
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
@@ -49,13 +49,20 @@ function UserMessage() {
     showList = chats
   }
 
+  const history = useHistory()
+
+  const enterChat = username => {
+    context.setUser(username)
+    history.push('/chat')
+  }
+
   const styles = customStyles();
   return (
     <div className="userMessage">
       {
         showList.map((chat, k) => (
           <div key={k}>
-            <Card component={Link} to="/chat" className={styles.card} elevation={0}>
+            <Card onClick={() => enterChat(chat.userName)} className={styles.card} elevation={0}>
               <CardHeader
                 avatar={<Avatar src={Image} className={styles.userImage} />}
                 action={

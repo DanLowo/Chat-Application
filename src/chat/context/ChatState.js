@@ -6,7 +6,8 @@ import ChatReducer from "./ChatReducer"
 import {
     SEND_MESSAGE,
     SET_SEARCH_BAR,
-    SET_MESSENGER_SEARCH
+    SET_MESSENGER_SEARCH,
+    SET_USER
 } from './types'
 
 const ChatState = props => {
@@ -113,13 +114,24 @@ const ChatState = props => {
             }
         ],
         users: [],
-        user: [],
+        user: {},
         posts: [],
         searchBar: false,
         messengerSearchList: []
     }
 
     const [state, dispatch] = useReducer(ChatReducer, initialState)
+
+    const setUser = (username) => {
+        let currentUsers = [...state.chats]
+
+        let getUser = currentUsers.find(user => user.userName === username)
+
+        dispatch({
+            type: SET_USER,
+            payload: getUser
+        })
+    }
 
     const setSearchBar = () => {
         dispatch({
@@ -166,7 +178,8 @@ const ChatState = props => {
             messengerSearchList: state.messengerSearchList,
             sendMessage,
             setSearchBar,
-            setMessengerSearch
+            setMessengerSearch,
+            setUser
         }}
     >
         {props.children}
