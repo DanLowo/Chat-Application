@@ -41,12 +41,19 @@ function UserMessage() {
 
   const context = useContext(ChatContext)
   let chats = context.chats
+  let searchList = context.messengerSearchList
+  let showList = []
+  if(searchList.length !== 0){
+    showList = searchList
+  } else {
+    showList = chats
+  }
 
   const styles = customStyles();
   return (
     <div className="userMessage">
       {
-        chats.map((chat, k) => (
+        showList.map((chat, k) => (
           <div key={k}>
             <Card component={Link} to="/chat" className={styles.card} elevation={0}>
               <CardHeader

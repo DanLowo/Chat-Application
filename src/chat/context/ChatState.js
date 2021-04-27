@@ -1,11 +1,12 @@
-import React, {useReducer} from 'react'
+import React, { useReducer } from 'react'
 
 import ChatContext from "./ChatContext"
 import ChatReducer from "./ChatReducer"
 
 import {
     SEND_MESSAGE,
-    SET_SEARCH_BAR
+    SET_SEARCH_BAR,
+    SET_MESSENGER_SEARCH
 } from './types'
 
 const ChatState = props => {
@@ -114,7 +115,8 @@ const ChatState = props => {
         users: [],
         user: [],
         posts: [],
-        searchBar: false
+        searchBar: false,
+        messengerSearchList: []
     }
 
     const [state, dispatch] = useReducer(ChatReducer, initialState)
@@ -122,6 +124,20 @@ const ChatState = props => {
     const setSearchBar = () => {
         dispatch({
             type: SET_SEARCH_BAR
+        })
+    }
+
+    const setMessengerSearch = (text) => {
+        let currentMessengerList = [...state.chats]
+
+        let filteredMessenger = currentMessengerList.filter(message => {
+            const regex = new RegExp(`${text}`, "gi");
+            return message.userName.match(regex)
+        });
+
+        dispatch({
+            type: SET_MESSENGER_SEARCH,
+            payload: filteredMessenger
         })
     }
 
@@ -138,7 +154,7 @@ const ChatState = props => {
             payload: updateMessage
         })
     }
-    
+
     return <ChatContext.Provider
         value={{
             users: state.users,
@@ -147,8 +163,10 @@ const ChatState = props => {
             posts: state.posts,
             chats: state.chats,
             searchBar: state.searchBar,
+            messengerSearchList: state.messengerSearchList,
             sendMessage,
-            setSearchBar
+            setSearchBar,
+            setMessengerSearch
         }}
     >
         {props.children}

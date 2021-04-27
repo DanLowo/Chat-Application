@@ -29,7 +29,7 @@ function SearchBar() {
                         </IconButton>
                     </InputAdornment>
                 }
-                // onChange={(e) => setMessage(e.target.value)}
+                onChange={(e) => context.setMessengerSearch(e.target.value)}
             />
         </div>
     )
