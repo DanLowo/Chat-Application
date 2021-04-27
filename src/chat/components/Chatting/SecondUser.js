@@ -28,13 +28,13 @@ const customStyles = makeStyles(() => ({
     }
 }))
 
-function SecondUser() {
+function SecondUser({message}) {
     const styles = customStyles()
     return (
         <div className={styles.root}>
             <Avatar className={styles.avatar} src={Image}  />
             <div className={styles.message}>
-                Hello Daniel, How are you doing to day. i saw your post it's very nice.
+               {message}
             </div>
         </div>
     )

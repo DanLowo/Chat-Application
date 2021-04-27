@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react'
+import React, { useContext, useState } from 'react'
 
 
 
@@ -39,6 +39,12 @@ function InputField() {
 
     const [message, setMessage] = useState("")
 
+    const handleSubmit = e => {
+        e.preventDefault()
+        context.sendMessage(message)
+        setMessage("")
+    }
+
     const styles = customStyles()
     return (
         <div className={styles.root}>
@@ -55,17 +61,18 @@ function InputField() {
                         </div>
                     </Grid>
                     <Grid item xs={10} sm={10} md={10} className={styles.input}>
-                        <TextField value={message} placeholder="Type a message" fullWidth variant="filled"
-                            endAdornment={
-                                <InputAdornment position="end">
-                                    <SendIcon htmlColor="blue" onClick={() => {
-                                        context.sendMessage(message)
-                                        setMessage("")
-                                    }} />
-                                </InputAdornment>
-                            }
-                            onChange={(e) => setMessage(e.target.value)}
-                        />
+                        <form onSubmit={handleSubmit}>
+                            <TextField required value={message} placeholder="Type a message" fullWidth variant="filled"
+                                endAdornment={
+                                    <InputAdornment position="end">
+                                        <IconButton type="submit">
+                                            <SendIcon htmlColor="blue" />
+                                        </IconButton>
+                                    </InputAdornment>
+                                }
+                                onChange={(e) => setMessage(e.target.value)}
+                            />
+                        </form>
                     </Grid>
                 </Grid>
             </Paper>

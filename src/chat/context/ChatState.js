@@ -17,7 +17,19 @@ const ChatState = props => {
             {
                 sender: "me",
                 message: "Hello, thanks for reaching out. How is the terms"
-            }
+            },
+            {
+                sender: "me",
+                message: "Hello, thanks for reaching out. How is the terms"
+            },
+            {
+                sender: "other",
+                message: "Hello Daniel, Godaddy here. We saw your works lately and we would like to know if you're available to work with us as a frontend engineer."
+            },
+            {
+                sender: "other",
+                message: "Hello Daniel, Godaddy here. We saw your works lately and we would like to know if you're available to work with us as a frontend engineer."
+            },
         ],
         users: [],
         user: [],
@@ -34,12 +46,11 @@ const ChatState = props => {
             message: text
         }
 
-        let ok = state.messages
-        console.log(ok)
+        let updateMessage = [...state.messages, msg]
 
         dispatch({
             type: SEND_MESSAGE,
-            payload: ok.push(msg)
+            payload: updateMessage
         })
     }
     
