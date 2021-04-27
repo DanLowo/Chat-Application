@@ -1,5 +1,7 @@
 import React from 'react'
 
+import {useHistory} from "react-router-dom"
+
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper"
 import IconButton from "@material-ui/core/IconButton"
@@ -12,7 +14,9 @@ import InfoIcon from "@material-ui/icons/InfoOutlined"
 const customStyles = makeStyles(() => ({
     root: {
         top: 0,
-        position: 'fixed'
+        position: 'fixed',
+        width: '100vw !important',
+        zIndex: 999
     },
     paper: {
         borderRadius: "0px",
@@ -40,11 +44,14 @@ const customStyles = makeStyles(() => ({
 }))
 
 function ChatNavBar() {
+
+    const history = useHistory()
+
     const styles = customStyles()
     return (
-        <div>
+        <div className={styles.root}>
            <Paper className={styles.paper}>
-                <IconButton className={styles.backButton}>
+                <IconButton className={styles.backButton} onClick={() => history.goBack()}>
                     <ChevronLeftIcon/>
                 </IconButton>
                 <span className={styles.userBar}>

@@ -22,7 +22,7 @@ import Image4 from "../assets/avatar2.png"
 
 const customStyles = makeStyles(() => ({
   root: {
-      margin: '15px'
+      margin: '15px',
   },
   avatar: {
     width: '50px',

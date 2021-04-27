@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-// import {Link, NavLink} from "react-router-dom"
+import { useHistory } from "react-router-dom"
 
 import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
@@ -14,11 +14,13 @@ import Bookmark from "@material-ui/icons/Bookmark";
 import CreateMessage from "@material-ui/icons/ChatBubbleOutlineOutlined"
 import Person from "@material-ui/icons/Person"
 
+
 const customStyles = makeStyles(() => ({
   root: {
     bottom: 0,
     position: "fixed",
-    width: '100vw !important'
+    width: '100vw !important',
+    zIndex: 999
   },
 
   addButton: {
@@ -36,6 +38,9 @@ const customStyles = makeStyles(() => ({
 }));
 
 function Bottombar() {
+
+  let history = useHistory()
+
   let path = window.location.pathname;
 
   let message = false
@@ -50,12 +55,25 @@ function Bottombar() {
   const styles = customStyles();
 
   const handleLink = (pathname) => {
-    setValue(path)
-
-    // switch(path){
-    //     case '/':
-
-    // }
+    switch (pathname) {
+      case 'home':
+        history.push('/')
+        break;
+      case 'chats':
+        history.push('/chats')
+        break;
+      case 'create':
+        history.push('/')
+        break;
+      case 'bookmark':
+        history.push('/')
+        break;
+      case 'profile':
+        history.push('/')
+        break;
+      default:
+        history.push('/')
+    }
   }
 
   return (
@@ -67,7 +85,9 @@ function Bottombar() {
           </Fab>
         </div>
       }
-      <BottomNavigation showLabels value={value}>
+      <BottomNavigation showLabels value={value} onChange={(e, newValue) => {
+        setValue(newValue)
+      }}>
         <BottomNavigationAction value="/" label="Home" icon={<Home />} onClick={() => handleLink('home')} />
         <BottomNavigationAction value="/chats" label="Chats" icon={<Chat />} onClick={() => handleLink('chats')} />
         <BottomNavigationAction
