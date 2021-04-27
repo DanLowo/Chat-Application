@@ -1,4 +1,6 @@
-import React from 'react'
+import React, {useContext, useState} from 'react'
+
+
 
 import { makeStyles } from "@material-ui/core/styles"
 import Grid from "@material-ui/core/Grid"
@@ -9,6 +11,7 @@ import InputAdornment from "@material-ui/core/InputAdornment"
 
 import SendIcon from "@material-ui/icons/Send"
 import AddImage from "@material-ui/icons/ImageOutlined"
+import ChatContext from '../../context/ChatContext'
 
 const customStyles = makeStyles(() => ({
     root: {
@@ -31,6 +34,11 @@ const customStyles = makeStyles(() => ({
 
 
 function InputField() {
+
+    const context = useContext(ChatContext)
+
+    const [message, setMessage] = useState("")
+
     const styles = customStyles()
     return (
         <div className={styles.root}>
@@ -40,19 +48,23 @@ function InputField() {
                         <div>
                             <IconButton className={styles.button}>
                                 <label htmlFor="file">
-                                    <AddImage fontSize="large"/>
+                                    <AddImage fontSize="large" />
                                 </label>
                                 <input id="file" type="file" accept="image/*" className={styles.fileInput} />
                             </IconButton>
                         </div>
                     </Grid>
                     <Grid item xs={10} sm={10} md={10} className={styles.input}>
-                        <TextField placeholder="Type a message" fullWidth variant="filled"
+                        <TextField value={message} placeholder="Type a message" fullWidth variant="filled"
                             endAdornment={
                                 <InputAdornment position="end">
-                                    <SendIcon htmlColor="blue"/>
+                                    <SendIcon htmlColor="blue" onClick={() => {
+                                        context.sendMessage(message)
+                                        setMessage("")
+                                    }} />
                                 </InputAdornment>
                             }
+                            onChange={(e) => setMessage(e.target.value)}
                         />
                     </Grid>
                 </Grid>

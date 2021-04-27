@@ -7,22 +7,27 @@ import Chat from "./chat/Chat"
 
 import { Switch, Route } from "react-router-dom"
 
+import ChatState from './chat/context/ChatState'
+
 function App() {
 
   return <div className="App">
+    <ChatState>
       <Switch>
         {/* set all chat design routes */}
-          <Route exact path="/">
-              <Index/>
-          </Route>
-          <Route path="/chats">
-              <Messenger/>
-          </Route>
-          <Route path="/chat">
-            <Chat/>
-          </Route>
+        <Route exact path="/">
+          <Index />
+        </Route>
+        <Route path="/chats">
+          <Messenger />
+        </Route>
+        <Route path="/chat">
+          <Chat />
+        </Route>
       </Switch>
-      
+    </ChatState>
+
+
   </div>;
 }
 
