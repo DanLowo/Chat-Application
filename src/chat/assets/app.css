@@ -18,6 +18,10 @@ body{
     text-decoration: none !important;
 }
 
+.userMessage{
+    margin-bottom: 140px;
+}
+
 .inputField .MuiInput-underline:hover:not(.Mui-disabled):before{
     border: 0
 }

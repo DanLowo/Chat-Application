@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
+import ChatContext from "../context/ChatContext"
 
 import { makeStyles } from "@material-ui/core/styles";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
@@ -11,9 +12,9 @@ import Avatar from "@material-ui/core/Avatar";
 import Image from "../assets/avatar1.jpeg";
 
 const customStyles = makeStyles(() => ({
-  root: {
-      marginTop: "10px",
-      borderRadius: '0px'
+  card: {
+    marginTop: "10px",
+    borderRadius: '0px'
   },
   userImage: {
     width: '60px',
@@ -21,7 +22,8 @@ const customStyles = makeStyles(() => ({
   },
   messageTime: {
     marginBottom: "0px",
-    marginRight: '3px'
+    marginRight: '3px',
+    color: 'grey'
   },
   messageCount: {
     marginTop: "3px",
@@ -36,29 +38,39 @@ const customStyles = makeStyles(() => ({
 }));
 
 function UserMessage() {
+
+  const context = useContext(ChatContext)
+  let chats = context.chats
+
   const styles = customStyles();
   return (
     <div className="userMessage">
-      <Card component={Link} to="/chat" className={styles.root} elevation={0}>
-        <CardHeader
-          avatar={<Avatar src={Image} className={styles.userImage} />}
-          action={
-            <div align="right">
-              <p className={styles.messageTime}>12:33</p>
-              <p className={styles.messageCount}>
-                <Avatar className={styles.messageCountAvatar}>3</Avatar>
-              </p>
-            </div>
-          }
-          title={
-            <span>
-              <b> Godaddy Inc. </b>
-            </span>
-          }
-          subheader="Hello Daniel, How are you ..."
-        />
-      </Card>
-      <Divider/>
+      {
+        chats.map((chat, k) => (
+          <div key={k}>
+            <Card component={Link} to="/chat" className={styles.card} elevation={0}>
+              <CardHeader
+                avatar={<Avatar src={Image} className={styles.userImage} />}
+                action={
+                  <div align="right" style={{marginRight: 2}}>
+                    <p className={styles.messageTime}>{chat.time}</p>
+                    <p className={styles.messageCount}>
+                      {chat.unread && <Avatar className={styles.messageCountAvatar}>2</Avatar>}
+                    </p>
+                  </div>
+                }
+                title={
+                  <span>
+                    <b> {chat.userName} </b>
+                  </span>
+                }
+                subheader={chat.messageExcerpt+'..'}
+              />
+            </Card>
+            <Divider />
+          </div>
+        ))
+      }
     </div>
   );
 }
