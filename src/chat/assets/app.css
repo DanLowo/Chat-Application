@@ -19,6 +19,7 @@ body{
 }
 
 .userMessage{
+    margin-top: 63px;
     margin-bottom: 140px;
 }
 
@@ -38,4 +39,20 @@ body{
     background-color: #ebebeb;
     padding: 7px;
     border-radius: 15px
+}
+
+.search {
+    width: 100%
+}
+
+.search .MuiInput-underline:hover:not(.Mui-disabled):before{
+    border-bottom: 1px solid grey
+}
+
+.search .MuiInput-underline:before{
+    border-bottom: 1px solid grey
+}
+
+.search .MuiInput-underline:after{
+    border-bottom: 1px solid grey
 }

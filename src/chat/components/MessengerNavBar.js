@@ -1,18 +1,26 @@
-import React from "react";
+import React, { useContext, Fragment } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Chat from "@material-ui/icons/ChatBubbleOutline"
 import Search from "@material-ui/icons/SearchOutlined";
 import Person from "@material-ui/icons/PersonOutline"
 import Paper from "@material-ui/core/Paper";
+import IconButton from "@material-ui/core/IconButton"
+
+import ChatContext from "../context/ChatContext"
+import SearchBar from "./SearchBar";
 
 const customStyles = makeStyles(() => ({
   paper: {
     borderRadius: '0px',
-    paddingLeft: '10px',
-    paddingRight: '10px'
+    top: 0,
+    position: 'fixed',
+    zIndex: 999,
+    width: '100vw !important'
   },
   navbar: {
     display: "flex",
+    marginLeft: 10,
+    marginRight: 10
   },
   navbarHeader: {
     display: "inline",
@@ -20,30 +28,48 @@ const customStyles = makeStyles(() => ({
     fontSize: '25px'
   },
   navbarSpan: {
-    marginTop: "22px",
+    marginTop: "8px",
+    marginRight: '-10px'
   },
   navbarIcon: {
     color: "grey",
-    marginLeft: "12px",
   },
 }));
 
 function MessengerNavBar() {
+
+  const context = useContext(ChatContext)
+
   const styles = customStyles();
 
   return (
     <Paper className={styles.paper}>
       <div className={styles.navbar}>
-        <h1 className={styles.navbarHeader}> Messenger </h1>
-        <span className={styles.navbarSpan}>
-            <Chat className={styles.navbarIcon} />
-        </span>
-        <span className={styles.navbarSpan}>
-          <Person className={styles.navbarIcon} />
-        </span>
-        <span className={styles.navbarSpan}>
-          <Search className={styles.navbarIcon} />
-        </span>
+        {
+          context.searchBar ? 
+            <div className="search">
+              <SearchBar />
+            </div>
+          :
+            <Fragment>
+              <h1 className={styles.navbarHeader}> Messenger </h1>
+              <span className={styles.navbarSpan}>
+                <IconButton>
+                  <Chat className={styles.navbarIcon} />
+                </IconButton>
+              </span>
+              <span className={styles.navbarSpan}>
+                <IconButton>
+                  <Person className={styles.navbarIcon} />
+                </IconButton>
+              </span>
+              <span className={styles.navbarSpan}>
+                <IconButton onClick={() => context.setSearchBar()}>
+                  <Search className={styles.navbarIcon} />
+                </IconButton>
+              </span>
+            </Fragment>
+        }
       </div>
     </Paper>
   );

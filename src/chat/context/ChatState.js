@@ -4,7 +4,8 @@ import ChatContext from "./ChatContext"
 import ChatReducer from "./ChatReducer"
 
 import {
-    SEND_MESSAGE
+    SEND_MESSAGE,
+    SET_SEARCH_BAR
 } from './types'
 
 const ChatState = props => {
@@ -112,11 +113,17 @@ const ChatState = props => {
         ],
         users: [],
         user: [],
-        posts: []
+        posts: [],
+        searchBar: false
     }
 
     const [state, dispatch] = useReducer(ChatReducer, initialState)
 
+    const setSearchBar = () => {
+        dispatch({
+            type: SET_SEARCH_BAR
+        })
+    }
 
     const sendMessage = (text) => {
         let msg = {
@@ -139,7 +146,9 @@ const ChatState = props => {
             messages: state.messages,
             posts: state.posts,
             chats: state.chats,
-            sendMessage
+            searchBar: state.searchBar,
+            sendMessage,
+            setSearchBar
         }}
     >
         {props.children}
