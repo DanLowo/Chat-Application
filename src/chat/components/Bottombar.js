@@ -74,7 +74,7 @@ function Bottombar() {
         history.push('/bookmark')
         break;
       case 'profile':
-        history.push('/')
+        history.push('/profile')
         break;
       case 'new-chat':
         history.push('/new-chat')

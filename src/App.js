@@ -10,6 +10,7 @@ import { Switch, Route } from "react-router-dom"
 import ChatState from './chat/context/ChatState'
 import NewChat from "./chat/NewChat"
 import Bookmark from "./chat/Bookmark"
+import Profile from "./chat/Profile"
 
 function App() {
 
@@ -31,6 +32,9 @@ function App() {
         </Route>
         <Route path="/bookmark">
           <Bookmark />
+        </Route>
+        <Route path="/profile">
+          <Profile />
         </Route>
       </Switch>
     </ChatState>
