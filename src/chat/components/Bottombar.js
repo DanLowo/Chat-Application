@@ -71,6 +71,9 @@ function Bottombar() {
       case 'profile':
         history.push('/')
         break;
+      case 'new-chat':
+        history.push('/new-chat')
+        break;
       default:
         history.push('/')
     }
@@ -80,7 +83,7 @@ function Bottombar() {
     <div className={styles.root}>
       {message &&
         <div align="right" className={styles.fabDiv}>
-          <Fab className={styles.fab} color="primary">
+          <Fab className={styles.fab} color="primary" onClick={() => handleLink('new-chat')}>
             <CreateMessage />
           </Fab>
         </div>

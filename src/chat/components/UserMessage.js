@@ -9,8 +9,6 @@ import CardHeader from "@material-ui/core/CardHeader";
 import Divider from "@material-ui/core/Divider"
 import Avatar from "@material-ui/core/Avatar";
 
-import Image from "../assets/avatar1.jpeg";
-
 const customStyles = makeStyles(() => ({
   card: {
     marginTop: "10px",
@@ -64,7 +62,7 @@ function UserMessage() {
           <div key={k}>
             <Card onClick={() => enterChat(chat.userName)} className={styles.card} elevation={0}>
               <CardHeader
-                avatar={<Avatar src={Image} className={styles.userImage} />}
+                avatar={<Avatar src={chat.userImage} className={styles.userImage} />}
                 action={
                   <div align="right" style={{marginRight: 2}}>
                     <p className={styles.messageTime}>{chat.time}</p>

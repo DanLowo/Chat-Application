@@ -8,6 +8,7 @@ import Chat from "./chat/Chat"
 import { Switch, Route } from "react-router-dom"
 
 import ChatState from './chat/context/ChatState'
+import NewChat from "./chat/NewChat"
 
 function App() {
 
@@ -23,6 +24,9 @@ function App() {
         </Route>
         <Route path="/chat">
           <Chat />
+        </Route>
+        <Route path="/new-chat">
+          <NewChat />
         </Route>
       </Switch>
     </ChatState>

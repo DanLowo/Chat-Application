@@ -3,6 +3,15 @@ import React, { useReducer } from 'react'
 import ChatContext from "./ChatContext"
 import ChatReducer from "./ChatReducer"
 
+
+//import user images
+import Img1 from "../assets/avatar.png"
+import Img2 from "../assets/avatar1.jpeg"
+import Img3 from "../assets/avatar2.png"
+import Img4 from "../assets/avatar2.jpeg"
+// import Img1 from "../assets/avatar.png"
+// import Img2 from "../assets/avatar1.jpeg"
+
 import {
     SEND_MESSAGE,
     SET_SEARCH_BAR,
@@ -38,82 +47,104 @@ const ChatState = props => {
             {
                 userName: "Godaddy Inc.",
                 messageExcerpt: "I have sent my resume to your email",
-                userImage: "",
+                userImage: Img2,
                 time: "12:33pm",
                 unread: false
             },
             {
                 userName: "Galvin Belson",
                 messageExcerpt: "Data creation is exploding..",
-                userImage: "",
+                userImage: Img1,
                 time: "Yesterday",
                 unread: false
             },
             {
                 userName: "Emmanuel Israel",
                 messageExcerpt: "Have you sent the documents?",
-                userImage: "",
+                userImage: Img3,
                 time: "Sun",
                 unread: true
             },
             {
                 userName: "Zameria",
                 messageExcerpt: "Good Morning Daniel",
-                userImage: "",
+                userImage: Img4,
                 time: "Thur",
                 unread: true
             },
-            // {
-            //     userName: "Ajadi Peter",
-            //     messageExcerpt: "Hey",
-            //     userImage: "",
-            // time: "Thur",
-            //     unread: false
-            // },
-            // // {
-            // //     userName: "United Bank Of Africa",
-            // //     messageExcerpt: "Have you solved the issue now?",
-            // //     userImage: "",
-            // time: "Thur",
-            // //     unread: false
-            // // },
-            // // {
-            // //     userName: "Blessing Akpan",
-            // //     messageExcerpt: "I'm waiting for you now",
-            // //     userImage: "",
-            // time: "Thur",
-            // //     unread: false
-            // // },
-            // // {
-            // //     userName: "Samuel John",
-            // //     messageExcerpt: "Good luck in your exams",
-            // //     userImage: "",
-            // time: "Thur",
-            // //     unread: false
-            // // },
             {
                 userName: "Sarah Udeh",
                 messageExcerpt: "Happy birthday ma",
-                userImage: "",
+                userImage: Img1,
                 time: "Thur",
                 unread: false
             },
             {
                 userName: "Elton Babalola",
                 messageExcerpt: "Why haven't you returned my calls",
-                userImage: "",
+                userImage: Img2,
                 time: "Wed",
                 unread: true
             },
             {
                 userName: "Abimbola Adeyemo",
                 messageExcerpt: "is typing...",
-                userImage: "",
+                userImage: Img4,
                 time: "Wed",
                 unread: false
             }
         ],
-        users: [],
+        users: [
+            {
+                userName: "Ajadi Peter",
+                messageExcerpt: "Hey",
+                userImage: Img1,
+                time: "Thur",
+                unread: false
+            },
+            {
+                userName: "United Bank Of Africa",
+                messageExcerpt: "Have you solved the issue now?",
+                userImage: Img4,
+                time: "Thur",
+                unread: false
+            },
+            {
+                userName: "Blessing Akpan",
+                messageExcerpt: "I'm waiting for you now",
+                userImage: Img3,
+                time: "Thur",
+                unread: false
+            },
+            {
+                userName: "Samuel John",
+                messageExcerpt: "Good luck in your exams",
+                userImage: Img2,
+                time: "Thur",
+                unread: false
+            },
+            {
+                userName: "Zameria",
+                messageExcerpt: "Good Morning Daniel",
+                userImage: Img4,
+                time: "Thur",
+                unread: true
+            },
+            {
+                userName: "Sarah Udeh",
+                messageExcerpt: "Happy birthday ma",
+                userImage: Img1,
+                time: "Thur",
+                unread: false
+            },
+            {
+                userName: "Elton Babalola",
+                messageExcerpt: "Why haven't you returned my calls",
+                userImage: Img2,
+                time: "Wed",
+                unread: true
+            }
+        ],
         user: {},
         posts: [],
         searchBar: false,
