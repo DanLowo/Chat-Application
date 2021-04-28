@@ -6,7 +6,7 @@ import NewChatList from './components/NewChatList'
 function NewChat() {
     return (
         <div>
-          <NewChatNavBar/>  
+          <NewChatNavBar title='New Message' />  
           <NewChatList/>
           <Bottombar/>
         </div>

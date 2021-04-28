@@ -71,7 +71,7 @@ function Bottombar() {
         history.push('/')
         break;
       case 'bookmark':
-        history.push('/')
+        history.push('/bookmark')
         break;
       case 'profile':
         history.push('/')

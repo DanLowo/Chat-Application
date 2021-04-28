@@ -9,6 +9,7 @@ import { Switch, Route } from "react-router-dom"
 
 import ChatState from './chat/context/ChatState'
 import NewChat from "./chat/NewChat"
+import Bookmark from "./chat/Bookmark"
 
 function App() {
 
@@ -27,6 +28,9 @@ function App() {
         </Route>
         <Route path="/new-chat">
           <NewChat />
+        </Route>
+        <Route path="/bookmark">
+          <Bookmark />
         </Route>
       </Switch>
     </ChatState>

@@ -34,7 +34,7 @@ const customStyles = makeStyles(() => ({
   },
 }));
 
-function NewChatNavBar() {
+function NewChatNavBar({title}) {
   const styles = customStyles();
   const history = useHistory()
 
@@ -44,7 +44,7 @@ function NewChatNavBar() {
           <IconButton className={styles.navbarIcon} onClick={() => history.goBack()}>
               <ChevronLeft />
           </IconButton>
-        <h1 className={styles.navbarHeader}> New Message </h1>
+        <h1 className={styles.navbarHeader}> {title} </h1>
       </div>
     </Paper>
   );
