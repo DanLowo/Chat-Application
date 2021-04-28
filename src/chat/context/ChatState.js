@@ -9,8 +9,7 @@ import Img1 from "../assets/avatar.png"
 import Img2 from "../assets/avatar1.jpeg"
 import Img3 from "../assets/avatar2.png"
 import Img4 from "../assets/avatar2.jpeg"
-// import Img1 from "../assets/avatar.png"
-// import Img2 from "../assets/avatar1.jpeg"
+import Ajr from "../assets/ajr.jpg"
 
 import {
     SEND_MESSAGE,
@@ -146,7 +145,45 @@ const ChatState = props => {
             }
         ],
         user: {},
-        posts: [],
+        posts: [
+            {
+                userName: "Daniel Olulowo",
+                userImage: Img2,
+                body:  `                When desiging user experience, the user always comes first. I mean, it's
+                in the name- USER experience. An app must be useable, useful and enjoyable
+                to the user. And yes i speak un poco espanol.`,
+                time: "45 mins ago",
+                likes: "2.2k",
+                thoughts: "177"
+            },
+            {
+                userName: "AJR",
+                userImage: Img1,
+                body:  `Thank you all for coming to my birthday party, I'm one minute old today 
+                and seriously, everything has been going great. I hope it continues that way`,
+                time: "1 mins ago",
+                bodyImg: Ajr,
+                likes: "43k",
+                thoughts: "5K"
+            },
+            {
+                userName: "T.O.P",
+                userImage: Img3,
+                body:  `I've seen the street you're working down. Good luck, lol`,
+                time: "5 hours ago",
+                likes: "600",
+                thoughts: "240"
+            },
+            {
+                userName: "Emmanuel Johnson",
+                userImage: Img4,
+                body:  `I know a man with nothing in his house, he told me about how his house burnt down and how he lost everything he owns.
+                Now that the money is gone, life will carry on.`,
+                time: "2 days ago",
+                likes: "2k",
+                thoughts: "17"
+            }
+        ],
         searchBar: false,
         messengerSearchList: []
     }

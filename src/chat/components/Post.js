@@ -8,14 +8,14 @@ import IconButton from "@material-ui/core/IconButton"
 import CardContent from "@material-ui/core/CardContent"
 import CardActions from "@material-ui/core/CardActions"
 import Button from "@material-ui/core/Button"
-// import Grid from "@material-ui/core/Grid"
+import CardMedia from "@material-ui/core/CardMedia"
 
 import MoreVertIcon from "@material-ui/icons/MoreVert"
 import LikeIcon from "@material-ui/icons/ThumbUpAltOutlined"
 import CommentIcon from "@material-ui/icons/CommentOutlined"
 import ShareIcon from "@material-ui/icons/ShareOutlined"
 
-import Image from "../assets/avatar.png"
+// import Image from "../assets/avatar.png"
 import Image2 from "../assets/avatar.png"
 import Image3 from "../assets/avatar1.jpeg"
 import Image4 from "../assets/avatar2.png"
@@ -55,7 +55,7 @@ const customStyles = makeStyles(() => ({
   }
 }));
 
-function Post() {
+function Post({post}) {
   const styles = customStyles();
 
   const viewedUserImages = [Image2, Image4]
@@ -64,7 +64,7 @@ function Post() {
     <div className={styles.root}>
       <Card className={styles.card}>
         <CardHeader
-          avatar={<Avatar src={Image} className={styles.avatar} />}
+          avatar={<Avatar src={post.userImage} className={styles.avatar} />}
           action={
             <IconButton>
               <MoreVertIcon />
@@ -72,16 +72,15 @@ function Post() {
           }
           title={
               <span style={{fontSize: '16px'}}>
-                  <b>Daniel Olulowo</b>
+                  <b> {post.userName} </b>
               </span>
           }
-          subheader="45 mins ago"
+          subheader={post.time}
         />
-        <CardContent style={{paddingTop: 5}}>
+        {post.bodyImg ? <CardMedia component="img" image={post.bodyImg} alt={post.userName} /> : <></>}
+        <CardContent style={{paddingTop: 15}}>
             <p className={styles.body}>
-                When desiging user experience, the user always comes first. I mean, it's
-                in the name- USER experience. An app must be useable, useful and enjoyable
-                to the user. And yes i speak un poco espanol.
+                {post.body}
             </p>
             <div>
             <Avatar className={styles.viewedUserImages} src={Image3} />
@@ -93,10 +92,10 @@ function Post() {
 
         <CardActions>
           <Button className={styles.actionText} startIcon={ <LikeIcon/> }>
-              2.2k likes
+              {post.likes} likes
           </Button>
           <Button className={styles.actionText1}  startIcon={ <CommentIcon/> }>
-              177 thoughts
+              {post.thoughts} thoughts
           </Button>
           <Button startIcon={ <ShareIcon/> } />
         </CardActions>
