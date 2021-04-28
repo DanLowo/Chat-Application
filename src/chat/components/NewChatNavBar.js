@@ -23,14 +23,14 @@ const customStyles = makeStyles(() => ({
   navbarHeader: {
     display: "inline",
     flexGrow: 1,
-    fontSize: '25px'
+    fontSize: '21px'
   },
   navbarSpan: {
     marginTop: "22px",
   },
   navbarIcon: {
     color: "grey",
-    marginLeft: "15px",
+    marginLeft: "-15px",
   },
 }));
 
@@ -41,7 +41,7 @@ function NewChatNavBar() {
   return (
     <Paper className={styles.paper}>
       <div className={styles.navbar}>
-          <IconButton onClick={() => history.goBack()}>
+          <IconButton className={styles.navbarIcon} onClick={() => history.goBack()}>
               <ChevronLeft />
           </IconButton>
         <h1 className={styles.navbarHeader}> New Message </h1>

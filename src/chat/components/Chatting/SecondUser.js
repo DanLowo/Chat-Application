@@ -22,9 +22,11 @@ const customStyles = makeStyles(() => ({
         padding: 15,
         backgroundColor: '#ebebeb',
         maxWidth: '55vw',
+        width: 'max-content',
         borderTopRightRadius: 30,
         borderBottomRightRadius: 30,
-        borderTopLeftRadius: 35
+        borderTopLeftRadius: 35,
+        fontSize: 14
     }
 }))
 

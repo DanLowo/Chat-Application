@@ -25,10 +25,10 @@ const customStyles = makeStyles(() => ({
   navbarHeader: {
     display: "inline",
     flexGrow: 1,
-    fontSize: '25px'
+    fontSize: '21px'
   },
   navbarSpan: {
-    marginTop: "8px",
+    marginTop: "4px",
     marginRight: '-10px'
   },
   navbarIcon: {

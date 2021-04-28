@@ -10,11 +10,12 @@ const customStyles = makeStyles(() => ({
         padding: 15,
         backgroundColor: 'blue',
         color: 'white',
-        maxWidth: '55vw',
+        maxWidth: '57vw',
         width: 'max-content',
         borderTopLeftRadius: 30,
         borderBottomLeftRadius: 30,
-        borderTopRightRadius: 35
+        borderTopRightRadius: 35,
+        fontSize: 14
     }
 }))
 
@@ -22,7 +23,7 @@ function FirstUser({message}) {
     const styles = customStyles()
     return (
         <div className={styles.root} align="right">
-            <div className={styles.message}>
+            <div className={styles.message} align="left">
                 {message}
             </div>
         </div>

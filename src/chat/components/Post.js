@@ -22,7 +22,7 @@ import Image4 from "../assets/avatar2.png"
 
 const customStyles = makeStyles(() => ({
   root: {
-      margin: '15px',
+      margin: '10px',
   },
   avatar: {
     width: '50px',
@@ -30,7 +30,7 @@ const customStyles = makeStyles(() => ({
   },
   body: {
       marginTop: '0px',
-      fontSize: '16px'
+      fontSize: '15px'
   },
   card: {
       borderRadius: '14px'

@@ -15,13 +15,14 @@ const customStyles = makeStyles(() => ({
     borderRadius: '0px'
   },
   userImage: {
-    width: '60px',
-    height: '60px'
+    width: '55px',
+    height: '55px'
   },
   messageTime: {
     marginBottom: "0px",
     marginRight: '3px',
-    color: 'grey'
+    color: 'grey',
+    fontSize: 13
   },
   messageCount: {
     marginTop: "3px",
@@ -29,9 +30,14 @@ const customStyles = makeStyles(() => ({
   },
   messageCountAvatar: {
     backgroundColor: "blue",
-    width: "20px",
-    height: "20px",
-    fontSize: "15px"
+    width: "15px",
+    height: "15px",
+    fontSize: "11px",
+    padding: 2,
+    paddingTop: 3
+  },
+  subheader: {
+    fontSize: 12
   }
 }));
 
@@ -76,7 +82,11 @@ function UserMessage() {
                     <b> {chat.userName} </b>
                   </span>
                 }
-                subheader={chat.messageExcerpt+'..'}
+                subheader={
+                  <span className={styles.subheader}>
+                    {chat.messageExcerpt+'..'}
+                  </span>
+                }
               />
             </Card>
             <Divider />

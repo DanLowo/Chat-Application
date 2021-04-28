@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom"
 import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
 import Fab from "@material-ui/core/Fab"
+import Paper from "@material-ui/core/Paper"
 import { makeStyles } from "@material-ui/core/styles";
 
 import Home from "@material-ui/icons/Home";
@@ -34,6 +35,10 @@ const customStyles = makeStyles(() => ({
   fabDiv: {
     marginRight: '10px',
     marginBottom: "10px"
+  },
+  paper: {
+    paddingRight: 15,
+    paddingLeft: 18
   }
 }));
 
@@ -88,33 +93,37 @@ function Bottombar() {
           </Fab>
         </div>
       }
-      <BottomNavigation showLabels value={value} onChange={(e, newValue) => {
-        setValue(newValue)
-      }}>
-        <BottomNavigationAction value="/" label="Home" icon={<Home />} onClick={() => handleLink('home')} />
-        <BottomNavigationAction value="/chats" label="Chats" icon={<Chat />} onClick={() => handleLink('chats')} />
-        <BottomNavigationAction
-          onClick={() => handleLink('create')}
-          value="/create"
-          icon={
-            <div className={styles.addButton}>
-              <Add htmlColor="white" />
-            </div>
-          }
-        />
-        <BottomNavigationAction
-          onClick={() => handleLink('bookmark')}
-          value="/bookmark"
-          label="Bookmarks"
-          icon={<Bookmark />}
-        />
-        <BottomNavigationAction
-          onClick={() => handleLink('profile')}
-          value="/profile"
-          label="Me"
-          icon={<Person />}
-        />
-      </BottomNavigation>
+
+      <Paper className={styles.paper}>
+        <BottomNavigation showLabels value={value} onChange={(e, newValue) => {
+          setValue(newValue)
+        }}>
+          <BottomNavigationAction value="/" label="Home" icon={<Home />} onClick={() => handleLink('home')} />
+          <BottomNavigationAction value="/chats" label="Chats" icon={<Chat />} onClick={() => handleLink('chats')} />
+          <BottomNavigationAction
+            onClick={() => handleLink('create')}
+            value="/create"
+            icon={
+              <div className={styles.addButton}>
+                <Add htmlColor="white" />
+              </div>
+            }
+          />
+          <BottomNavigationAction
+            onClick={() => handleLink('bookmark')}
+            value="/bookmark"
+            label="Bookmarks"
+            icon={<Bookmark />}
+          />
+          <BottomNavigationAction
+            onClick={() => handleLink('profile')}
+            value="/profile"
+            label="Me"
+            icon={<Person />}
+          />
+        </BottomNavigation>
+      </Paper>
+
     </div>
   );
 }

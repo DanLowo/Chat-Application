@@ -15,9 +15,10 @@ const customStyles = makeStyles(() => ({
     chatSectionDay: {
         backgroundColor: 'blue',
         borderRadius: "20px",
-        padding: 10,
+        padding: 8,
         width: 70,
-        color: 'white'
+        color: 'white',
+        fontSize: 13
     }
 }))
 
