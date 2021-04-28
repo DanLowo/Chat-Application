@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
 import Card from "@material-ui/core/Card";
@@ -9,6 +9,7 @@ import CardContent from "@material-ui/core/CardContent"
 import CardActions from "@material-ui/core/CardActions"
 import Button from "@material-ui/core/Button"
 import CardMedia from "@material-ui/core/CardMedia"
+// import Menu from "@material-ui/core/Menu"
 
 import MoreVertIcon from "@material-ui/icons/MoreVert"
 import LikeIcon from "@material-ui/icons/ThumbUpAltOutlined"
@@ -57,6 +58,7 @@ const customStyles = makeStyles(() => ({
 
 function Post({post}) {
   const styles = customStyles();
+  const [menu, setMenu] = useState(false)
 
   const viewedUserImages = [Image2, Image4]
 
@@ -66,8 +68,11 @@ function Post({post}) {
         <CardHeader
           avatar={<Avatar src={post.userImage} className={styles.avatar} />}
           action={
-            <IconButton>
+            <IconButton onClick={() => setMenu(!menu)}>
               <MoreVertIcon />
+              {/* <Menu open={menu} anchorEl>
+                iodc
+              </Menu> */}
             </IconButton>
           }
           title={

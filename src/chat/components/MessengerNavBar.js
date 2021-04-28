@@ -1,5 +1,6 @@
 import React, { useContext, Fragment } from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import {useHistory} from "react-router-dom"
 import Chat from "@material-ui/icons/ChatBubbleOutline"
 import Search from "@material-ui/icons/SearchOutlined";
 import Person from "@material-ui/icons/PersonOutline"
@@ -37,7 +38,7 @@ const customStyles = makeStyles(() => ({
 }));
 
 function MessengerNavBar() {
-
+  const history = useHistory()
   const context = useContext(ChatContext)
 
   const styles = customStyles();
@@ -54,12 +55,12 @@ function MessengerNavBar() {
             <Fragment>
               <h1 className={styles.navbarHeader}> Messenger </h1>
               <span className={styles.navbarSpan}>
-                <IconButton>
+                <IconButton onClick={() => history.push('/new-chat')}>
                   <Chat className={styles.navbarIcon} />
                 </IconButton>
               </span>
               <span className={styles.navbarSpan}>
-                <IconButton>
+                <IconButton onClick={() => history.push('/profile')}>
                   <Person className={styles.navbarIcon} />
                 </IconButton>
               </span>
