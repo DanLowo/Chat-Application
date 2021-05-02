@@ -13,6 +13,10 @@ const customStyles = makeStyles(() => ({
         height: "100px !important",
         marginTop: "150px",
         marginBottom: '-15px'
+    },
+    root: {
+        marginBottom: 80,
+        paddingTop: 10
     }
 }))
 
@@ -21,7 +25,7 @@ function Bookmark() {
     let posts = context.bookmarks
     const styles = customStyles()
     return (
-        <div>
+        <div className={styles.root}>
             <NewChatNavBar title="Bookmarked" />
             <div style={{ marginTop: 58}}>
             {
