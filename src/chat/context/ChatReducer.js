@@ -1,5 +1,6 @@
 import {
-    SEND_MESSAGE, SET_SEARCH_BAR, SET_MESSENGER_SEARCH, SET_USER
+    SEND_MESSAGE, SET_SEARCH_BAR, SET_MESSENGER_SEARCH, SET_USER, 
+    ADD_TO_BOOKMARK
 } from './types'
 
 // eslint-disable-next-line
@@ -25,6 +26,11 @@ export default (state, action) => {
             return {
                 ...state,
                 user: action.payload
+            }
+        case ADD_TO_BOOKMARK:
+            return {
+                ...state,
+                bookmarks: action.payload
             }
         default:
             return state

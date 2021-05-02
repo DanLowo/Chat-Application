@@ -41,12 +41,17 @@ const customStyles = makeStyles(() => ({
     },
     listHeader: {
         color: 'grey',
-        marginBottom: '0px'
+        marginBottom: '0px',
+        fontSize: 15
     },
     icon: {
-        backgroundColor: '#c2c2c2',
+        backgroundColor: '#f1f1f1',
         padding: 10,
-        borderRadius: "50%"
+        borderRadius: "50%",
+        color: 'blue'
+    },
+    title: {
+        fontSize: "10px !important"
     }
 }))
 
@@ -64,13 +69,13 @@ function Profile() {
             <List>
                 <ListItem button divider>
                     <ListItemIcon> <MessageIcon className={styles.icon} /> </ListItemIcon>
-                    <ListItemText> <b> Active Status </b> </ListItemText>
+                    <ListItemText className={styles.title}> <b> Active Status </b> </ListItemText>
                 </ListItem>
             </List>
             <List>
                 <ListItem button divider>
                     <ListItemIcon> <UsernameIcon className={styles.icon} /> </ListItemIcon>
-                    <ListItemText> <b>Username</b> </ListItemText>
+                    <ListItemText className={styles.title}> <b>Username</b> </ListItemText>
                 </ListItem>
             </List>
 
@@ -78,31 +83,31 @@ function Profile() {
             <List>
                 <ListItem button divider>
                     <ListItemIcon> <PrivacyIcon className={styles.icon} /> </ListItemIcon>
-                    <ListItemText> <b> Privacy </b> </ListItemText>
+                    <ListItemText className={styles.title}> <b> Privacy </b> </ListItemText>
                 </ListItem>
             </List>
             <List>
                 <ListItem button divider>
                     <ListItemIcon> <NotificationIcon className={styles.icon} /> </ListItemIcon>
-                    <ListItemText> <b>Notifications & Sounds</b> </ListItemText>
+                    <ListItemText className={styles.title}> <b>Notifications & Sounds</b> </ListItemText>
                 </ListItem>
             </List>
             <List>
                 <ListItem button divider>
                     <ListItemIcon> <VideaIcon className={styles.icon} /> </ListItemIcon>
-                    <ListItemText> <b>Story</b> </ListItemText>
+                    <ListItemText className={styles.title}> <b>Story</b> </ListItemText>
                 </ListItem>
             </List>
             <List>
                 <ListItem button divider>
                     <ListItemIcon> <ContactIcon className={styles.icon} /> </ListItemIcon>
-                    <ListItemText> <b>Phone Contacts</b> </ListItemText>
+                    <ListItemText className={styles.title}> <b>Phone Contacts</b> </ListItemText>
                 </ListItem>
             </List>
             <List>
                 <ListItem button divider>
                     <ListItemIcon> <PhotoIcon className={styles.icon} /> </ListItemIcon>
-                    <ListItemText> <b>Photos & Media</b> </ListItemText>
+                    <ListItemText className={styles.title}> <b>Photos & Media</b> </ListItemText>
                 </ListItem>
             </List>
 
@@ -111,31 +116,31 @@ function Profile() {
             <List>
                 <ListItem button divider>
                     <ListItemIcon> <SwitchIcon className={styles.icon} /> </ListItemIcon>
-                    <ListItemText> <b> Switch Account </b> </ListItemText>
+                    <ListItemText className={styles.title}> <b> Switch Account </b> </ListItemText>
                 </ListItem>
             </List>
             <List>
                 <ListItem button divider>
                     <ListItemIcon> <SettingsIcon className={styles.icon} /> </ListItemIcon>
-                    <ListItemText> <b>Account Settings</b> </ListItemText>
+                    <ListItemText className={styles.title}> <b>Account Settings</b> </ListItemText>
                 </ListItem>
             </List>
             <List>
                 <ListItem button divider>
                     <ListItemIcon> <ReportIcon className={styles.icon} /> </ListItemIcon>
-                    <ListItemText> <b>Report Technical Problem</b> </ListItemText>
+                    <ListItemText className={styles.title}> <b>Report Technical Problem</b> </ListItemText>
                 </ListItem>
             </List>
             <List>
                 <ListItem button divider>
                     <ListItemIcon> <HelpIcon className={styles.icon} /> </ListItemIcon>
-                    <ListItemText> <b>Help</b> </ListItemText>
+                    <ListItemText className={styles.title}> <b>Help</b> </ListItemText>
                 </ListItem>
             </List>
             <List>
                 <ListItem button divider>
                     <ListItemIcon> <LegalIcon className={styles.icon} /> </ListItemIcon>
-                    <ListItemText> <b>Legal & Policies</b> </ListItemText>
+                    <ListItemText className={styles.title}> <b>Legal & Policies</b> </ListItemText>
                 </ListItem>
             </List>
         </div>

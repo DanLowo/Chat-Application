@@ -56,3 +56,8 @@ body{
 .search .MuiInput-underline:after{
     border-bottom: 1px solid grey
 }
+
+
+.makeStyles-root-46 .MuiTypography-body1{
+    font-size: 10px !important
+}

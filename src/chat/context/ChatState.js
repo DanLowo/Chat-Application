@@ -15,7 +15,8 @@ import {
     SEND_MESSAGE,
     SET_SEARCH_BAR,
     SET_MESSENGER_SEARCH,
-    SET_USER
+    SET_USER,
+    ADD_TO_BOOKMARK
 } from './types'
 
 const ChatState = props => {
@@ -184,6 +185,7 @@ const ChatState = props => {
                 thoughts: "17"
             }
         ],
+        bookmarks: [],
         searchBar: false,
         messengerSearchList: []
     }
@@ -199,6 +201,19 @@ const ChatState = props => {
             type: SET_USER,
             payload: getUser
         })
+    }
+
+    const addToBookMark = (post) => {
+        let currentBookmarks = [...state.bookmarks]
+        currentBookmarks.push(post)
+        dispatch({ type: ADD_TO_BOOKMARK, payload: currentBookmarks})
+    }
+
+    const removeFromBookmark = (post) => {
+        let currentBookmarks = [...state.bookmarks]
+        let inds = currentBookmarks.indexOf(post)
+        currentBookmarks.splice(inds, 1)
+        dispatch({ type: ADD_TO_BOOKMARK, payload: currentBookmarks})
     }
 
     const setSearchBar = () => {
@@ -243,11 +258,14 @@ const ChatState = props => {
             posts: state.posts,
             chats: state.chats,
             searchBar: state.searchBar,
+            bookmarks: state.bookmarks,
             messengerSearchList: state.messengerSearchList,
             sendMessage,
             setSearchBar,
             setMessengerSearch,
-            setUser
+            setUser,
+            addToBookMark,
+            removeFromBookmark
         }}
     >
         {props.children}
