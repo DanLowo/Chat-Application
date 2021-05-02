@@ -17,14 +17,14 @@ const customStyles = makeStyles(() => ({
   navbarHeader: {
     display: "inline",
     flexGrow: 1,
-    fontSize: '25px'
+    fontSize: '22px'
   },
   navbarSpan: {
-    marginTop: "22px",
+    marginTop: "17px",
   },
   navbarIcon: {
     color: "grey",
-    marginLeft: "15px",
+    marginLeft: "18px",
   },
 }));
 

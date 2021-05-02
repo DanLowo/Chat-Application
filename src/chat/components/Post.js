@@ -11,6 +11,9 @@ import Button from "@material-ui/core/Button"
 import CardMedia from "@material-ui/core/CardMedia"
 import Menu from "@material-ui/core/Menu"
 import MenuItem from "@material-ui/core/MenuItem"
+import Dialog from "@material-ui/core/Dialog"
+import DialogTitle from "@material-ui/core/DialogTitle"
+import DialogAction from "@material-ui/core/DialogActions"
 
 import MoreVertIcon from "@material-ui/icons/MoreVert"
 import LikeIcon from "@material-ui/icons/ThumbUpAltOutlined"
@@ -61,24 +64,32 @@ const customStyles = makeStyles(() => ({
 function Post({ post }) {
   const styles = customStyles();
   const [menu, setMenu] = useState(false)
+  const [dialog, setDialog] = useState({status: false, data: ''})
   const context = useContext(ChatContext)
   const bookmarkList = context.bookmarks
 
   const bookmark = () => {
     bookmarkList.includes(post) ? alert('Already Bookmarked') : context.addToBookMark(post)
     setMenu(null)
+    setDialog({status: true, data: 'Post Saved'})
   }
 
   const removeFromBookmark = () => {
-    // console.log(post)
     bookmarkList.includes(post) ? context.removeFromBookmark(post) : alert('Not Bookmarked')
-    setMenu(null)   
+    setMenu(null)
+    setDialog({status: true, data: 'Post Unsaved'})
   }
 
   const viewedUserImages = [Image2, Image4]
 
   return (
     <div className={styles.root}>
+      <Dialog open={dialog.status} onClose={() => setDialog({status: false, data: ''})}>
+        <DialogTitle> {dialog.data} </DialogTitle>
+        <DialogAction>
+          <Button onClick={() => setDialog({status: false, data: ''})} size="small" variant="contained" color="primary">Close</Button>
+        </DialogAction>
+      </Dialog>
       <Card className={styles.card}>
         <CardHeader
           avatar={<Avatar src={post.userImage} className={styles.avatar} />}

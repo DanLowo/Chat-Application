@@ -14,7 +14,7 @@ const customStyles = makeStyles(() => ({
     padding: "13px",
   },
   storiesHeader: {
-    fontSize: "15px",
+    fontSize: "13px",
     color: "blue",
   },
   storiesDiv: {
@@ -25,8 +25,8 @@ const customStyles = makeStyles(() => ({
   storyAvatar: {
     display: "inline-block",
     marginRight: "12px",
-    width: '60px',
-    height: '60px',
+    width: '50px',
+    height: '50px',
     border: '3px solid #8181e2'
   },
 }));
