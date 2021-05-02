@@ -10,7 +10,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 import Home from "@material-ui/icons/Home";
 import Chat from "@material-ui/icons/Chat";
-import Add from "@material-ui/icons/Add";
+import Add from "@material-ui/icons/Brush";
 import Bookmark from "@material-ui/icons/Bookmark";
 import CreateMessage from "@material-ui/icons/ChatBubbleOutlineOutlined"
 import Person from "@material-ui/icons/Person"
@@ -23,23 +23,11 @@ const customStyles = makeStyles(() => ({
     width: '100vw !important',
     zIndex: 999
   },
-
-  addButton: {
-    backgroundColor: "grey",
-    padding: "9px",
-    paddingRight: '10px',
-    paddingLeft: "10px",
-    borderRadius: '50%'
-  },
-
   fabDiv: {
     marginRight: '10px',
     marginBottom: "10px"
-  },
-  paper: {
-    paddingRight: 15,
-    paddingLeft: 18
   }
+
 }));
 
 function Bottombar() {
@@ -49,12 +37,15 @@ function Bottombar() {
   let path = window.location.pathname;
 
   let message = false
+  let mainPage = false
 
   if (path === "/chats") {
     message = true
   } else {
     message = false
   }
+
+  path === '/' ? mainPage = true : mainPage = false
 
   const [value, setValue] = useState(path);
   const styles = customStyles();
@@ -94,21 +85,20 @@ function Bottombar() {
         </div>
       }
 
+      {mainPage &&
+        <div align="right" className={styles.fabDiv}>
+          <Fab className={styles.fab} color="primary">
+            <Add />
+          </Fab>
+        </div>
+      }
+
       <Paper className={styles.paper}>
-        <BottomNavigation showLabels value={value} onChange={(e, newValue) => {
+        <BottomNavigation className={styles.bar} showLabels value={value} onChange={(e, newValue) => {
           setValue(newValue)
         }}>
           <BottomNavigationAction value="/" label="Home" icon={<Home />} onClick={() => handleLink('home')} />
           <BottomNavigationAction value="/chats" label="Chats" icon={<Chat />} onClick={() => handleLink('chats')} />
-          <BottomNavigationAction
-            onClick={() => handleLink('create')}
-            value="/create"
-            icon={
-              <div className={styles.addButton}>
-                <Add htmlColor="white" />
-              </div>
-            }
-          />
           <BottomNavigationAction
             onClick={() => handleLink('bookmark')}
             value="/bookmark"

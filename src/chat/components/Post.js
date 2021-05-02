@@ -42,11 +42,11 @@ const customStyles = makeStyles(() => ({
     borderRadius: '14px'
   },
   actionText: {
-    fontSize: '14px',
+    fontSize: '13px',
     textTransform: 'lowercase'
   },
   actionText1: {
-    fontSize: '14px',
+    fontSize: '13px',
     marginRight: 'auto',
     textTransform: 'lowercase'
   },
@@ -57,7 +57,7 @@ const customStyles = makeStyles(() => ({
   viewedUserImages1: {
     display: 'inline-block',
     border: '2px solid rgb(233, 228, 228)',
-    marginLeft: '-15px'
+    marginLeft: '-20px'
   }
 }));
 

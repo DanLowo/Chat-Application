@@ -25,9 +25,9 @@ const customStyles = makeStyles(() => ({
   storyAvatar: {
     display: "inline-block",
     marginRight: "12px",
-    width: '50px',
-    height: '50px',
-    border: '3px solid #8181e2'
+    width: '47px',
+    height: '47px',
+    border: '2px solid #8181e2'
   },
 }));
 

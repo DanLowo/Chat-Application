@@ -26,10 +26,12 @@ const customStyles = makeStyles(() => ({
   navbarHeader: {
     display: "inline",
     flexGrow: 1,
-    fontSize: '21px'
+    fontSize: '18px',
+    padding: 5,
+    paddingLeft: 0
   },
   navbarSpan: {
-    marginTop: "4px",
+    marginTop: "3px",
     marginRight: '-10px'
   },
   navbarIcon: {
