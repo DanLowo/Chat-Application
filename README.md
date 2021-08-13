@@ -8,7 +8,11 @@ The original UI design for this project 'chat/assets/UI Designs'
 
 ### Start Project
 1. clone the project
-2. yarn start
+2. yarn install
+3. yarn start
+
+### Video Preview
+(https://vimeo.com/586481180)
 
 ### Note : Design only for mobile view
 
